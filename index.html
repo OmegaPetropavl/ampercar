@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Аренда автомобилей и не только!</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/bootstrap1.css">
 </head>
 <body>
 
@@ -20,16 +21,16 @@
                 <li class="menu-item">
                     <a href="#cars">Автомобили</a>
                 </li>
-                <li class="menu-item">
-                    <a href="#price">Бронирование авто</a>
+                <li class="menu-item" id="bron">
+                    <a href="#price" >Бронирование авто</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#price">Услуги</a>
+                    <a href="Uslugi.html">Услуги</a>
                 </li>
             </ul>
         </nav>
         <div class="logsign">
-            <a href="https://yandex.kz"><img src="images/logsign.png" alt="Logo"> </a>
+            <a href="https://yandex.kz"><img src="images/logsign.png" alt="Logo" title="Вход/Регистрация"></a>
         </div>
     </div>
 </header>
@@ -54,6 +55,33 @@
     <div class="container">
         <h2 class="sub-title">Наш автопарк</h2>
         <div class="car-items">
+            <div class="car-item">
+                <div class="car-item-image">
+                    <img src="images/1.png" alt="Image 1">
+                </div>
+                <div class="car-item-title">Lamborghini Huracan Spyder</div>
+                <div class="car-item-info">
+                    <div class="car-item-point">
+                        <img src="images/gear.png" alt="Gear">
+                        <div>Привод</div>
+                        <div>Полный</div>
+                    </div>
+                    <div class="car-item-point">
+                        <img src="images/wheel.png" alt="Wheel">
+                        <div>Двигатель</div>
+                        <div>5.2 л.с</div>
+                    </div>
+                    <div class="car-item-point">
+                        <img src="images/belt.png" alt="Belt">
+                        <div>Кол-во мест</div>
+                        <div>2</div>
+                    </div>
+                </div>
+                <div class="car-item-action">
+                    <button class="button car-button">Забронировать</button>
+                </div>
+            </div>
+
             <div class="car-item">
                 <div class="car-item-image">
                     <img src="images/1.png" alt="Image 1">
@@ -276,11 +304,13 @@
     <div class="container">
         <h2 class="sub-title">Узнать цену и забронировать</h2>
         <div class="price-text">
-            Заполните данные, и мы перезвоним вам для уточнения всех деталей бронирования
+            Для уточнения всех деталей бронирования, пожалуйста зарегестрируйтесь.<br>Есть аккаунт? <a href="https://yandex.kz">Войти</a>
         </div>
         <form action="" class="price-form">
             <input type="text" class="price-input" id="name" placeholder="Ваше имя">
             <input type="text" class="price-input" id="phone" placeholder="Ваш телефон">
+            <input type="text" class="price-input" id="login" placeholder="Ваш логин">
+            <input type="text" class="price-input" id="password" placeholder="Пароль">
             <input type="text" class="price-input" id="car" placeholder="Автомобиль, который вас интересует">
             <button class="button" type="button" id="price-action">Узнать цену</button>
         </form>
@@ -293,13 +323,19 @@
         <div class="logo">
             <img src="images/logo1.png" alt="Logo">
         </div>
+        <div class="menu">
+            <a href="agreement.html" style="margin-right: 25px">Пользовательское соглашение</a>
+            <a href="privacy-policy.html" style="margin-right: 25px">Политика конфиденциальности</a>
+            <a href="contract.html" style="margin-right: 25px">Договор</a>
+        </div>
         <div class="rights">© 2023 Ampercar.kz</div>
     </div>
 </footer>
 
 <script src="scripts/script.js"></script>
-
-
+<script src="scripts/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="scripts/script.js"></script>
 </body>
 </html>
 
