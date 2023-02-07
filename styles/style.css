@@ -685,15 +685,19 @@ li {
     display: block;
 }/* Конец блока signin/signup */
 
+#reviews {
+    border: 1px gray solid
+}
+
 .koguvcavis-varazdel {
     padding: 38px 0;
-
     color: white;
     text-align: center;
 }
 .sestim-donials{
     max-width: 1200px;
     margin: auto;
+
     overflow: hidden;
     padding: 0 20px;
 }

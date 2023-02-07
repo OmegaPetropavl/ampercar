@@ -19,6 +19,9 @@ document.getElementById("price-action").onclick = function () {
     else if (document.getElementById("car").value === "") {
         alert("Заполните поле автомобиль!");
     }
+    else if (document.getElementById("email").value === "") {
+        alert("Заполните поле email!");
+    }
     else {
         alert("Спасибо за заявку, мы свяжемся с вами в ближайшее время!");
     }
