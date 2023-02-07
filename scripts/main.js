@@ -145,3 +145,4 @@ jQuery.fn.putCursorAtEnd = function() {
     	}
 	});
 };
+
