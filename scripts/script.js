@@ -40,17 +40,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-$(function() {
-    let header = $('.header');
-
-    $(window).scroll(function() {
-        if($(this).scrollTop() > 1) {
-            header.addClass('header_fixed');
-        } else {
-            header.removeClass('header_fixed');
-        }
-    });
-});
+// $(function() {
+//     let header = $('.header');
+//
+//     $(window).scroll(function() {
+//         if($(this).scrollTop() > 1) {
+//             header.addClass('header_fixed');
+//         } else {
+//             header.removeClass('header_fixed');
+//         }
+//     });
+// });
 
 
 // $(function() {// Для удаления прерывания при скролле (шапка)
