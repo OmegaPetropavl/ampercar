@@ -32,8 +32,8 @@ alert(average(k));
 // При неправильном заполнении сообщить, какие поля надо исправить. Если всё заполнено верно, сообщить, что данные отправлены.
 function validate(){
     //Считаем значения из полей name и email в переменные x и y
-    var x=document.forms["price-form"]["name"].value;
-    var y=document.forms["price-form"]["email"].value;
+    let x=document.forms["form"]["name"].value;
+    let y=document.forms["form"]["email"].value;
     //Если поле name пустое выведем сообщение и предотвратим отправку формы
     if (x.length==0){
         document.getElementById("name").innerHTML="*данное поле обязательно для заполнения";
@@ -45,11 +45,11 @@ function validate(){
         return false;
     }
     //Проверим содержит ли значение введенное в поле email символы @ и .
-    at=y.indexOf("@");
-    dot=y.indexOf(".");
-    //Если поле не содержит эти символы знач email введен не верно
+     at = y.indexOf("@");
+     dot = y.indexOf(".");
+    //Если поле не содержит эти символы знач email введен неверно
     if (at<1 || dot <1){
-        document.getElementById("emailf").innerHTML="*email введен не верно";
+        document.getElementById("email").innerHTML="*email введен не верно";
         return false;
     }
 }

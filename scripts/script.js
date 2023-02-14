@@ -11,7 +11,8 @@ for (var i = 0; i < buttons.length; i++) {
 
 document.getElementById("price-action").onclick = function () {
     if (document.getElementById("name").value === "") {
-        alert("Заполните поле имя!");
+        document.getElementById("name").innerHTML="*данное поле обязательно для заполнения";
+        return false;
     }
     else if (document.getElementById("phone").value === "") {
         alert("Заполните поле телефон!");
