@@ -6,22 +6,14 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/bootstrap1.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script src="scripts/lr2.js"></script>
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
 </head>
 <body>
-    <!--<script> //Задание 1. Задача 1. Определить день недели по дате ДД.ММ.ГГГГ (указание: используйте формулу Зеллера для решения задачи)
-        function weekday (id) {
-            let arrD = k.split('.');
-            let d = parseInt(arrD[0]), m = parseInt(arrD[1]), y = parseInt(arrD[2]);
-            if (m<3) { m+=12; y&#45;&#45;; }
-            let n = y%100, c = Math.floor(y/100);
-            dday= (Math.floor((m+1)*26/10)+d+n+Math.floor(n/4)+Math.floor(c/4)-2*c) % 7;
-            let wday = ['Суббота','Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница'];
-            function pad (n,size) { return String(Array(size-1).fill('0').join('')+n).slice(-size); }
-            return pad(arrD[0],2)+'.'+pad(arrD[1],2)+'.'+pad(arrD[2],4)+'='+wday[dday];
-        }
-    let k = prompt("Введите дату");
-    alert(weekday(k))
-    </script>-->
 
 
 
@@ -68,6 +60,7 @@
             </div>
         </div>
     </header>
+
     <main id="main">
         <section class="main">
             <div class="container-xxl">
@@ -356,14 +349,99 @@
                 </div>
                 <form class="price-form" name="form"  id="form" onsubmit="return validate()">
                     <input type="text" class="price-input" name="name" id="name" placeholder="Ваше имя">
-                    <input type="text" class="price-input" id="email" placeholder="Ваш e-mail">
-                    <input type="text" class="price-input" id="login" placeholder="Ваш логин">
-                    <input type="text" class="price-input" id="password" placeholder="Пароль">
-                    <input type="text" class="price-input" id="car" placeholder="Автомобиль, который вас интересует">
-                    <button class="button" type="button" id="price-action">Узнать цену</button>
-                    <input type="submit" class="button" id="submit" value="Отправить форму">
+                    <input type="text" class="price-input" name="email" id="email" placeholder="Ваш e-mail">
+                    <input type="text" class="price-input"  name="login" id="login" placeholder="Ваш логин">
+                    <input type="text" class="price-input"  name="password" id="password" placeholder="Пароль">
+                    <input type="text" class="price-input"  name="car" id="car" placeholder="Автомобиль, который вас интересует">
+
+                    <input type="submit" class="button" id="submit" name="submit" value="Отправить форму">
                 </form>
                 <img src="images/rolls.png" alt="Rolls" class="price-image">
+<!--                <form class="needs-validation" novalidate>-->
+<!--                    <div class="form-row">-->
+<!--                        <div class="col-md-4 mb-3">-->
+<!--                            <label for="validationCustom01">Имя</label>-->
+<!--                            <input type="text" class="form-control" id="validationCustom01" placeholder="Имя" value="Mark" required>-->
+<!--                            <div class="valid-feedback">-->
+<!--                                Looks good!-->
+<!--                            </div>-->
+<!--                            <div class="invalid-feedback">-->
+<!--                                Please provide a valid name.-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="col-md-4 mb-3">-->
+<!--                            <label for="validationCustomUsername">Имя пользователя</label>-->
+<!--                            <div class="input-group">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                    <span class="input-group-text" id="inputGroupPrepend">@</span>-->
+<!--                                </div>-->
+<!--                                <input type="text" class="form-control" id="validationCustomUsername" placeholder="Имя пользователя" aria-describedby="inputGroupPrepend" required>-->
+<!--                                <div class="invalid-feedback">-->
+<!--                                    Please choose a username.-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-row">-->
+<!--                        <div class="col-md-6 mb-3">-->
+<!--                            <label for="validationCustom03">City</label>-->
+<!--                            <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>-->
+<!--                            <div class="invalid-feedback">-->
+<!--                                Please provide a valid city.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-md-3 mb-3">-->
+<!--                            <label for="validationCustom04">State</label>-->
+<!--                            <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>-->
+<!--                            <div class="invalid-feedback">-->
+<!--                                Please provide a valid state.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-md-3 mb-3">-->
+<!--                            <label for="validationCustom05">Zip</label>-->
+<!--                            <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>-->
+<!--                            <div class="invalid-feedback">-->
+<!--                                Please provide a valid zip.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <div class="form-check">-->
+<!--                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>-->
+<!--                            <label class="form-check-label" for="invalidCheck">-->
+<!--                                Agree to terms and conditions-->
+<!--                            </label>-->
+<!--                            <div class="invalid-feedback">-->
+<!--                                You must agree before submitting.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <button class="btn btn-primary" type="submit">Submit form</button>-->
+<!--                </form>-->
+
+<!--                <script>-->
+<!--                    // Example starter JavaScript for disabling form submissions if there are invalid fields-->
+<!--                    (function() {-->
+<!--                        'use strict';-->
+<!--                        window.addEventListener('load', function() {-->
+<!--                            // Fetch all the forms we want to apply custom Bootstrap validation styles to-->
+<!--                            var forms = document.getElementsByClassName('needs-validation');-->
+<!--                            // Loop over them and prevent submission-->
+<!--                            var validation = Array.prototype.filter.call(forms, function(form) {-->
+<!--                                form.addEventListener('submit', function(event) {-->
+<!--                                    if (form.checkValidity() === false) {-->
+<!--                                        event.preventDefault();-->
+<!--                                        event.stopPropagation();-->
+<!--                                    }-->
+<!--                                    form.classList.add('was-validated');-->
+<!--                                }, false);-->
+<!--                            });-->
+<!--                        }, false);-->
+<!--                    })();-->
+<!--                </script>-->
+
+
             </div>
         </section>
 
@@ -441,79 +519,74 @@
         </div>
     </footer>
 
-<script src="scripts/lr2.js"></script>
-<script src="scripts/script.js"></script>
-<script src="scripts/bootstrap.bundle.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="scripts/script.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="scripts/main.js"></script>
 
-<div class="cd-user-modal"> <!-- все формы на фоне затемнения-->
-    <div class="cd-user-modal-container"> <!-- основной контейнер -->
-        <ul class="cd-switcher">
-            <li><a href="#0">Вход</a></li>
-            <li><a href="#0">Регистрация</a></li>
-        </ul>
-        <div id="cd-login"> <!-- форма входа -->
-            <form class="cd-form">
-                <p class="fieldset">
-                    <label class="image-replace cd-email" for="signin-email">E-mail</label>
-                    <input class="full-width has-padding has-border" id="signin-email" type="email"
-                           placeholder="E-mail">
-                    <span class="cd-error-message">Здесь сообщение об ошибке!</span>
-                </p>
-                <p class="fieldset">
-                    <label class="image-replace cd-password" for="signin-password">Пароль</label>
-                    <input class="full-width has-padding has-border" id="signin-password" type="text"
-                           placeholder="Пароль">
-                    <a href="#0" class="hide-password">Скрыть</a>
-                    <span class="cd-error-message">Здесь сообщение об ошибке!</span>
-                </p>
-                <p class="fieldset">
-                    <input type="checkbox" id="remember-me" checked>
-                    <label for="remember-me">Запомнить меня</label>
-                </p>
-                <p class="fieldset">
-                    <input class="full-width" type="submit" value="Войти">
-                </p>
-            </form>
 
-            <!-- <a href="#0" class="cd-close-form">Close</a> -->
-        </div> <!-- конец блока с формой входа -->
-        <div id="cd-signup"> <!-- блок с формой регистрации -->
-            <form class="cd-form">
-                <p class="fieldset">
-                    <label class="image-replace cd-username" for="signup-username">Имя пользователя</label>
-                    <input class="full-width has-padding has-border" id="signup-username" type="text"
-                           placeholder="Имя пользователя">
-                    <span class="cd-error-message">Здесь сообщение об ошибке!</span>
-                </p>
-                <p class="fieldset">
-                    <label class="image-replace cd-email" for="signup-email">E-mail</label>
-                    <input class="full-width has-padding has-border" id="signup-email" type="email"
-                           placeholder="E-mail">
-                    <span class="cd-error-message">Здесь сообщение об ошибке!</span>
-                </p>
-                <p class="fieldset">
-                    <label class="image-replace cd-password" for="signup-password">Пароль</label>
-                    <input class="full-width has-padding has-border" id="signup-password" type="text"
-                           placeholder="Пароль">
-                    <a href="#0" class="hide-password">Скрыть</a>
-                    <span class="cd-error-message">Здесь сообщение об ошибке!</span>
-                </p>
-                <p class="fieldset">
-                    <input type="checkbox" id="accept-terms">
-                    <label for="accept-terms">Я согласен с <a href="#0">Условиями</a></label>
-                </p>
-                <p class="fieldset">
-                    <input class="full-width has-padding" type="submit" value="Создать аккаунт">
-                </p>
-            </form>
-            <!-- <a href="#0" class="cd-close-form">Закрыть</a> -->
-        </div> <!-- cd-signup -->
-    </div> <!-- cd-user-modal-container -->
-</div> <!-- cd-user-modal -->
+    <div class="cd-user-modal"> <!-- все формы на фоне затемнения-->
+        <div class="cd-user-modal-container"> <!-- основной контейнер -->
+            <ul class="cd-switcher">
+                <li><a href="#0">Вход</a></li>
+                <li><a href="#0">Регистрация</a></li>
+            </ul>
+            <div id="cd-login"> <!-- форма входа -->
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="signin-email" type="email"
+                               placeholder="E-mail">
+                        <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+                    </p>
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signin-password">Пароль</label>
+                        <input class="full-width has-padding has-border" id="signin-password" type="text"
+                               placeholder="Пароль">
+                        <a href="#0" class="hide-password">Скрыть</a>
+                        <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+                    </p>
+                    <p class="fieldset">
+                        <input type="checkbox" id="remember-me" checked>
+                        <label for="remember-me">Запомнить меня</label>
+                    </p>
+                    <p class="fieldset">
+                        <input class="full-width" type="submit" value="Войти">
+                    </p>
+                </form>
+
+                <!-- <a href="#0" class="cd-close-form">Close</a> -->
+            </div> <!-- конец блока с формой входа -->
+            <div id="cd-signup"> <!-- блок с формой регистрации -->
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-username" for="signup-username">Имя пользователя</label>
+                        <input class="full-width has-padding has-border" id="signup-username" type="text"
+                               placeholder="Имя пользователя">
+                        <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+                    </p>
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="signup-email" type="email"
+                               placeholder="E-mail">
+                        <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+                    </p>
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signup-password">Пароль</label>
+                        <input class="full-width has-padding has-border" id="signup-password" type="text"
+                               placeholder="Пароль">
+                        <a href="#0" class="hide-password">Скрыть</a>
+                        <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+                    </p>
+                    <p class="fieldset">
+                        <input type="checkbox" id="accept-terms">
+                        <label for="accept-terms">Я согласен с <a href="#0">Условиями</a></label>
+                    </p>
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Создать аккаунт">
+                    </p>
+                </form>
+                <!-- <a href="#0" class="cd-close-form">Закрыть</a> -->
+            </div> <!-- cd-signup -->
+        </div> <!-- cd-user-modal-container -->
+    </div> <!-- cd-user-modal -->
+    <script src="scripts/script.js"></script>
 </body>
 </html>
 
