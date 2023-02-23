@@ -22,7 +22,45 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+function validate() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var login = document.getElementById("login").value;
+    var password = document.getElementById("password").value;
+    var car = document.getElementById("car").value;
 
+    if (name == "") {
+        alert("Пожалуйста, введите ваше имя.");
+        return false;
+    }
+    if (email == "") {
+        alert("Пожалуйста, введите ваш e-mail.");
+        return false;
+    }
+    if (email.indexOf("@") == -1) {
+        alert("Пожалуйста, введите корректный e-mail.");
+        return false;
+    }
+    if (email.indexOf(".") == -1) {
+        alert("Пожалуйста, допишите точку")
+        return false;
+    }
+    if (login == "") {
+        alert("Пожалуйста, введите ваш логин.");
+        return false;
+    }
+    if (password == "") {
+        alert("Пожалуйста, введите ваш пароль.");
+        return false;
+    }
+    if (car == "") {
+        alert("Пожалуйста, введите название автомобиля, который вас интересует.");
+        return false;
+    }
+
+    return true;
+
+}
 
 
 

@@ -17,13 +17,8 @@
 body {
     font-family: Roboto, sans-serif;
 
-}
 
-/*.header {*/
-/*    border-bottom: 1px solid #E5E5E5;*/
-/*    padding-bottom: 10px;*/
-/*    background-color: white;*/
-/*}*/
+}
 
 .container {
     display: flex;
@@ -47,7 +42,6 @@ body {
     z-index: 1;
     opacity: 0;
 }
-
 
 
 .block {
