@@ -28,6 +28,11 @@ function validate() {
     var login = document.getElementById("login").value;
     var password = document.getElementById("password").value;
     var car = document.getElementById("car").value;
+    var checkbox = document.getElementById("rule-check");
+
+    if (checkbox.checked) {
+        alert("checked")
+    }
 
     if (name == "") {
         alert("Пожалуйста, введите ваше имя.");
@@ -53,10 +58,7 @@ function validate() {
         alert("Пожалуйста, введите ваш пароль.");
         return false;
     }
-    if (car == "") {
-        alert("Пожалуйста, введите название автомобиля, который вас интересует.");
-        return false;
-    }
+    if
 
     return true;
 
