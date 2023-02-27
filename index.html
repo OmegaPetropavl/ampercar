@@ -6,6 +6,7 @@
     <meta name="description" content="Ampercar.kz company official website">
     <meta name="keywords" content="HTML,CSS,PHP,JavaScript">
     <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width">
     <title>Аренда автомобилей и не только!</title>
     <link rel="shortcut icon" href="/images/logo1.png" type="image/png">
     <link rel="stylesheet" href="styles/style.css">
@@ -18,6 +19,11 @@
     <script src="scripts/script.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="scripts/main.js"></script>
+    
+     <!-- CSS reset -->
+	<link rel="stylesheet" href="styles/reviews.css"> <!-- Resource style -->
+	
+  	
 </head>
 <body>
 
@@ -42,13 +48,15 @@
             <nav class="main-nav">
                 <ul>
                     <!-- ссылки на вызов форм -->
-                    <li><a class="cd-signin" href="#0">Вход</a></li>
-                    <li><a class="cd-signup" href="#0">Регистрация</a></li>
+                    <li>
+                        <div class="logsign">
+                        <a class="cd-signin" href="#0"><img src="images/logsign.png" alt="Logo" title="Вход/Регистрация"></a>
+                    </div>
+                </li>
+                    
                 </ul>
             </nav>
-            <div class="logsign">
-                <a class="cd-signin" href="#0"><img src="images/logsign.png" alt="Logo" title="Вход/Регистрация"></a>
-            </div>
+            
         </div>
     </header>
 
@@ -335,76 +343,244 @@
                 <div class="price-text">
                     Для уточнения всех деталей бронирования, пожалуйста зарегестрируйтесь.<br> Есть аккаунт? <nav class="main-nav"><ul><li><a class="" href="#0">Войти в аккаунт</a></li></ul></nav>
                 </div>
-                <form class="price-form" name="form"  id="form" onsubmit="return validate()">
-                    <input type="text" class="price-input" name="name" id="name" placeholder="Ваше имя" required pattern="[А-Яа-яА-Яа-я]А-Яа-я]А-Яа-я]А-Яа-я]А-Яа-я]]">
-                    <input type="email" class="price-input" name="email" id="email" placeholder="Ваш e-mail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                    <input type="text" class="price-input"  name="login" id="login" placeholder="Ваш логин" required>
-                    <input type="password" class="price-input"  name="password" id="password" placeholder="Пароль" required>
+                <form class="price-form" name="form"  id="form" onsubmit="return validation()">
+                    <input type="text" class="price-input" name="name" id="name" placeholder="Ваше имя">
+                    <div class="error-message"></div>
+                    <input type="text" class="price-input" name="email" id="email" placeholder="Ваш e-mail">
+                    <input type="text" class="price-input"  name="login" id="login" placeholder="Ваш логин">
+                    <input type="password" class="price-input"  name="password1" id="password1" placeholder="Пароль" >
+                    <input type="password" class="price-input"  name="password2" id="password2" placeholder="Повторите пароль">
                     <div class="form-checkbox"><input type="checkbox"  class="form-checkbox" name="rule-check" id="rule-check">  Я согласен с <a href="privacy-policy.html" style="margin-right: 25px">политикой конфиденциальности</a></div>
                     <input type="submit" class="button" id="submit" name="submit" value="Отправить форму">
                 </form>
+
                 <img src="images/rolls.png" alt="Rolls" class="price-image">
             </div>
         </section>
 
         <section id="reviews">
-            <div class="container-xxl">
-                <div class="koguvcavis-varazdel">
-                    <div class="sestim-donials">
-                        <h1>Отзывы</h1>
-                        <div class="sectionesag"></div>
-                        <div class="sagestim-lonials">
-                            <div class="vemotau-vokusipol">
-                                <div class="testimonial">
-                                    <img src="http://zornet.ru/_fr/83/7890600.jpg" alt="">
-                                    <div class="gecedanam">Антон Попов</div>
-                                    <div class="apogered-gselected">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-
-                                    <p>Здесь первое описание. Продолжение.</p>
-                                </div>
-                            </div>
-
-                            <div class="vemotau-vokusipol">
-                                <div class="testimonial">
-                                    <img src="http://zornet.ru/_fr/83/2047084.jpg" alt="">
-                                    <div class="gecedanam">Дмитрий Атрохов</div>
-                                    <div class="apogered-gselected">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-
-                                    <p>Второй отзыв. Его продолжение.</p>
-                                </div>
-                            </div>
-
-                            <div class="vemotau-vokusipol">
-                                <div class="testimonial">
-                                    <img src="http://zornet.ru/_fr/83/5640570.jpg" alt="">
-                                    <div class="gecedanam">Каспер Волков</div>
-                                    <div class="apogered-gselected">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                    <p>Третье описание. На отзыв.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="reviews-title"><h1 class="sub-title">Отзывы о нас</h1></div>
+                <div class="cd-testimonials-wrapper cd-container">
+            <!-- cd-testimonials -->
+    
+        <a href="#0" class="cd-see-all">Читать все</a>
+    <div class="flex-viewport" style="overflow: hidden; position: relative; height: 0px;"><ul class="cd-testimonials" style="width: 1200%; transition-duration: 0s; transform: translate3d(-2004px, 0px, 0px);"><li class="clone" aria-hidden="true" style="width: 668px; float: left; display: block; opacity: 1; position: relative;">
+                <p>Долго не решались делать собственный сайт, но Сергей убедил нас в необходимости этого шага. А самое главное, он сумел почувствовать специфику нашей компании и передать это в дизайне и организации сайта. Сайт Усадьбы "Сказка" родился сказочно быстро! Мы продолжаем сотрудничество и в настоящее время. Команда студии "Studio Design" умеет работать оперативно, творчески, мыслит позитивно и всегда идет в ногу со временем. Доверяя администрирование сайта студии, мы знаем, что всегда можем рассчитывать не только на техническую поддержку и оптимизацию, но и на то, что все новинки, появляющиеся  на просторах Интернета в области сайтостроения, обязательно воплотятся и в нашем совместном проекте.  Пусть будет больше проектов хороших и разных! Удачи!</p>				
+                <div class="cd-author">
+                        <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-11.jpg" alt="Author image" draggable="false">
+                        <ul class="cd-author-info">
+                            <li>Галина Киричек</li>
+                            <li>администратор Усадьбы  <a href="http://volga-skazka.ru" target="_blank">«Сказка»</a></li>
+                        </ul>
+                </div> <!-- cd-author -->
+                </li>
+            <li class="" style="width: 668px; float: left; display: block; opacity: 1; position: relative;">
+                <p>Спасибо за высокий профессионализм в создании сайта загородного клуба «Атмосфера». Первый сайта клуба был неудачный и откровенно слабый. Деньги были потрачены зря. По совету друзей обратился к Сергею. Остался доволен его работой. Достаточно недорого за такой уровень сайта и очень быстро. Что хочу отметить особо - внимание Сергея к мелочам. Наши клиенты, так же, высоко оценили наш сайт. Спасибо, Сергей!</p>
+                <div class="cd-author">
+                    <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-1.jpg" alt="Author image" draggable="false">
+                    <ul class="cd-author-info">
+                        <li>Баринов Игорь</li>
+                        <li>Руководитель загородного клуба <a href="http://atmosfera64.ru" target="_blank">«Атмосфера»</a></li>
+                    </ul>
                 </div>
-            </div>
+            </li>
+    
+            <li style="width: 668px; float: left; display: block; opacity: 1; position: relative;" class="">
+                <p>Studio Design является партнером компании Sprinthost с 2011 года. За время сотрудничества мы убедились, что Сергей по-настоящему заботится о сайтах клиентов Studio Design, размещенных на нашем хостинге, и всегда прикладывает максимум усилий, чтобы справиться с любыми сложностями, возникающими в процессе сопровождения сайтов. Мы благодарны Сергею за активное взаимодействие с нашей командой, за внимательное отношение к нашим рекомендациям, и очень рады, что Сергей остается нашим партнером на протяжении такого значительного срока. Уверена, сотрудничество между нашими компаниями будет активно развиваться, оставаясь таким же позитивным, как и сейчас.</p>
+                <div class="cd-author">
+                    <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-2.jpg" alt="Author image" draggable="false">
+                    <ul class="cd-author-info">
+                        <li>Пугач Галина</li>
+                        <li>Менеджер по маркетингу ООО <a href="http://sprinthost.ru" target="_blank">«Спринтхост»</a></li>
+                    </ul>
+                </div>
+            </li>
+    
+            <li style="width: 668px; float: left; display: block; opacity: 1; position: relative;" class="flex-active-slide">
+                <p>Оперативно и внимательно Сергей подходит к решению любых вопросов касательно функционирования сайта. Лаконичность сайта и легкость в использовании позволяют работать с ним в удовольствие! А результат всегда радует. Спасибо за отличную работу!</p>
+                <div class="cd-author">
+                    <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-3.jpg" alt="Author image" draggable="false">
+                    <ul class="cd-author-info">
+                        <li>Анастасия Финогенова</li>
+                        <li>Модератор сайта агентства маркетинговых коммуникаций <a href="http://http://btl64.ru/" target="_blank">«Ромашка»</a></li>
+                    </ul>
+                </div>
+            </li>
+            
+            <li style="width: 668px; float: left; display: block; opacity: 1; position: relative;">
+                <p>Долго не решались делать собственный сайт, но Сергей убедил нас в необходимости этого шага. А самое главное, он сумел почувствовать специфику нашей компании и передать это в дизайне и организации сайта. Сайт Усадьбы "Сказка" родился сказочно быстро! Мы продолжаем сотрудничество и в настоящее время. Команда студии "Studio Design" умеет работать оперативно, творчески, мыслит позитивно и всегда идет в ногу со временем. Доверяя администрирование сайта студии, мы знаем, что всегда можем рассчитывать не только на техническую поддержку и оптимизацию, но и на то, что все новинки, появляющиеся  на просторах Интернета в области сайтостроения, обязательно воплотятся и в нашем совместном проекте.  Пусть будет больше проектов хороших и разных! Удачи!</p>				
+                <div class="cd-author">
+                        <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-11.jpg" alt="Author image" draggable="false">
+                        <ul class="cd-author-info">
+                            <li>Галина Киричек</li>
+                            <li>администратор Усадьбы  <a href="http://volga-skazka.ru" target="_blank">«Сказка»</a></li>
+                        </ul>
+                </div> <!-- cd-author -->
+                </li>
+            
+        <li class="clone" aria-hidden="true" style="width: 668px; float: left; display: block; opacity: 1; position: relative;">
+                <p>Спасибо за высокий профессионализм в создании сайта загородного клуба «Атмосфера». Первый сайта клуба был неудачный и откровенно слабый. Деньги были потрачены зря. По совету друзей обратился к Сергею. Остался доволен его работой. Достаточно недорого за такой уровень сайта и очень быстро. Что хочу отметить особо - внимание Сергея к мелочам. Наши клиенты, так же, высоко оценили наш сайт. Спасибо, Сергей!</p>
+                <div class="cd-author">
+                    <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-1.jpg" alt="Author image" draggable="false">
+                    <ul class="cd-author-info">
+                        <li>Баринов Игорь</li>
+                        <li>Руководитель загородного клуба <a href="http://atmosfera64.ru" target="_blank">«Атмосфера»</a></li>
+                    </ul>
+                </div>
+            </li></ul></div><ul class="flex-direction-nav"><li><a class="flex-prev" href="#">Previous</a></li><li><a class="flex-next" href="#">Next</a></li></ul>
+            </div> <!-- cd-testimonials-wrapper -->
+    
+    <div class="cd-testimonials-all">
+        <div class="cd-testimonials-all-wrapper">
+            <ul style="position: relative; height: 2537px;">
+                <li class="cd-testimonials-item" style="position: absolute; left: 0px; top: 0px;">
+                    <p>Спасибо за высокий профессионализм в создании сайта загородного клуба «Атмосфера». Первый сайта клуба был неудачный и откровенно слабый. Деньги были потрачены зря. По совету друзей обратился к Сергею. Остался доволен его работой. Достаточно недорого за такой уровень сайта и очень быстро. Что хочу отметить особо - внимание Сергея к мелочам. Наши клиенты, так же, высоко оценили наш сайт. Спасибо, Сергей!</p>
+                    
+                    <div class="cd-author">
+                        <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-1.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>Баринов Игорь</li>
+                            <li>Руководитель загородного клуба <a href="http://atmosfera64.ru" target="_blank">«Атмосфера»</a></li>
+                        </ul>
+                    </div> <!-- cd-author -->
+                </li>
+    
+                <li class="cd-testimonials-item" style="position: absolute; left: 389px; top: 0px;">
+                    <p>Studio Design является партнером компании Sprinthost с 2011 года. За время сотрудничества мы убедились, что Сергей по-настоящему заботится о сайтах клиентов Studio Design, размещенных на нашем хостинге, и всегда прикладывает максимум усилий, чтобы справиться с любыми сложностями, возникающими в процессе сопровождения сайтов. Мы благодарны Сергею за активное взаимодействие с нашей командой, за внимательное отношение к нашим рекомендациям, и очень рады, что Сергей остается нашим партнером на протяжении такого значительного срока. Уверена, сотрудничество между нашими компаниями будет активно развиваться, оставаясь таким же позитивным, как и сейчас.</p>
+                    
+                    <div class="cd-author">
+                        <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-2.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>Пугач Галина</li>
+                            <li>Менеджер по маркетингу ООО <a href="http://sprinthost.ru" target="_blank">«Спринтхост»</a></li>
+                        </ul>
+                    </div> <!-- cd-author -->
+                </li>
+    
+                <li class="cd-testimonials-item" style="position: absolute; left: 779px; top: 0px;">
+                    <p>Оперативно и внимательно Сергей подходит к решению любых вопросов касательно функционирования сайта. Лаконичность сайта и легкость в использовании позволяют работать с ним в удовольствие! А результат всегда радует. Спасибо за отличную работу!</p>
+                    
+                    <div class="cd-author">
+                        <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-3.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>Анастасия Финогенова</li>
+                            <li>Модератор сайта агентства маркетинговых коммуникаций <a href="http://http://btl64.ru/" target="_blank">«Ромашка»</a></li>
+                        </ul>
+                    </div> <!-- cd-author -->
+                </li>
+    
+                <li class="cd-testimonials-item" style="position: absolute; left: 779px; top: 434px;">
+                    <p>Знаем Сергея, владельца компании «Studio Design» уже очень давно, с каждым новым сайтом их работы нравились все больше и больше! Когда возникла необходимость сделать сайт, перед нами даже не стоял вопрос, кому доверится! Спасибо «Studio Design» за нестандартные идеи, дизайн, скорость и качество выполнения работ! В ближайшее время мы запускаем еще 2 направления, одно из которых интернет магазин и конечно их будет делать только Сергей! Спасибо! Успехов и развития!</p>
+                    
+                    <div class="cd-author">
+                        <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-4.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>Константин Николаенко</li>
+                            <li>Руководитель проекта <a href="http://http://bizneslekar.ru/" target="_blank">«Бизнес-Лекарь»</a></li>
+                        </ul>
+                    </div> <!-- cd-author -->
+                </li>
+    
+                <li class="cd-testimonials-item" style="position: absolute; left: 0px; top: 525px;">
+                    <p>Мы не долго думали кому доверить изготовление нашего сайта www.decor-love.ru, это уже второй сайт который мы заказали у этой компании. Считаем, что доверившись «Studio Design», мы не ошиблись: стильный дизайн, а самое главное на сегодняшний день - это адаптивность сайта под все мобильные устройства. Это значит о нас знают, аудитория наших клиентов значительно расширилась, так как основная масса клиентов сегодня пользуются планшетами и телефонами для поиска необходимой услуги. Спасибо! Успехов и процветания!</p>
+                    
+                    <div class="cd-author">
+                        <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-5.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>Лёвин Евгений</li>
+                            <li>Технический директор  <a href="http://decor-love.ru" target="_blank">«Студия свадебного дизайна Love Decor»</a></li>
+                        </ul>
+                    </div> <!-- cd-author -->
+                </li>
+    
+                <li class="cd-testimonials-item" style="position: absolute; left: 389px; top: 679px;">
+                    <p>Как приятно работать с думающими, ответственными людьми. Ощущение что ему больше надо чем нам. Когда пришла работать в новую компанию, о новом сайте были одни разговоры. Причем долгое время. При обращении к Сергею вопрос решился мгновенно. Причем ему важно прежде дело, без денег готов все сделать. Получилось. Нравится. Над недостатками работаем.Хороший инструмент продажи. В продвижении сайта нет предела совершенства. А? ЖДУ ПРЕДЛОЖЕНИЙ!</p>
+                    
+                    <div class="cd-author">
+                        <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-6.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>Азоркина Маргарита Николаевна</li>
+                            <li>Генеральный директор Санаторий ООО <a href="http://sp-izumrud.ru" target="_blank">«Изумруд»</a></li>
+                        </ul>
+                    </div> <!-- cd-author -->
+                </li>
+    
+                <li class="cd-testimonials-item" style="position: absolute; left: 779px; top: 1003px;">
+                    <p>В наше время очень много компаний, которые занимаются разработкой сайтов, но толковых из них единицы. Недавно решили обновить свой сайт. Обратились к Сергею, о чем ни чуть не жалеем. Буквально за несколько дней был создан дизайн сайта, который координально отличался от предыдущего. Сайт стал современым, быстрым и простым в использовании. Страницы открываются достаточно быстро, навигация четкая и понятная для посетителей. Он приобрел индивидуальность. Хотим сказать огромное спасибо за проделанную работу. Сергей открыл для нас новый мир интернета. К разработке сайта он подошел со всей душой, окунулся в нее с головой. Если вам необходим отличный сайт, то обращайтесь к Сергею. Он точно сделаем из вашего сайта"конфетку"!</p>
+                    
+                    <div class="cd-author">
+                        <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-7.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>Зайцева Екатерина</li>
+                            <li>Директор агентства маркетинговых коммуникаций <a href="http://btl64.ru" target="_blank">«Ромашка»</a></li>
+                        </ul>
+                    </div> <!-- cd-author -->
+                </li>
+    
+                <li class="cd-testimonials-item" style="position: absolute; left: 0px; top: 1135px;">
+                    <p>Решил для разработки сайта найти качественного исполнителя и не ошибся. Так как в прямом смысле все работы Сергея очень понравились, отдал и дизайн, и разработку структуры сайта, и раскрутку в его руки. Первый предложенный дизайн был стильный и привлекательный, но, после заполнения сайта большим количеством фото, стало не хватать ярких красок. Поэтому дизайн Сергей за несколько дней переделал в более цветное исполнение и показал как менять элементы дизайна своими силами. В целом заказ быстро и качественно сделан, дальнейшее заполнение сайта обновленной информацией происходит очень легко. С уважением отношусь к людям профессионально выполняющим поставленную задачу. Спасибо за хорошую работу и тех. поддержку.</p>
+                    
+                    <div class="cd-author">
+                        <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-8.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>Иванов Олег</li>
+                            <li>Директор рекламного агентства <a href="http://www.kipras.info" target="_blank">«Кипрас»</a></li>
+                        </ul>
+                    </div> <!-- cd-author -->
+                </li>
+    
+                <li class="cd-testimonials-item" style="position: absolute; left: 389px; top: 1245px;">
+                    <p>Спасибо огромное администратору сайта <a style="color:#fff;" href="http://www.sp-izumrud.ru/otzyvy_klientov/morozova_anna/" target="_blank">"Изумруд"</a> Сергею за размещение на сайте наших с дочкой фотографий празднования Нового года! Хочется отметить грамотную и профессиональную работу Сергея. Современный, оригинальный, удобный сайт "Изумруда" позволяет нам - клиентам, с легкостью узнать информацию, которая нас интересует и полностью отвечает всем нашим запросам. Желаю Вам процветания и творческих успехов!!!</p>
+                    
+                    <div class="cd-author">
+                        <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-9.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>Анна Морозова</li>
+                            <li>Инженер по промышленной безопасности ООО «Инженерные системы»</li>
+                        </ul>
+                    </div> <!-- cd-author -->
+                </li>
+    
+                <li class="cd-testimonials-item" style="position: absolute; left: 779px; top: 1767px;">
+                    <p>Портал «Православная Пермь» получился светлым, в небесных тонах Пресвятой Богородицы. Дизайн придумывался и обсуждался достаточно долго, но после принятия решения рождение сайта или, говоря техническим языком конструирование, было сделано очень быстро. UMI.CMS работает без сбоев, материалы и фотографии быстро появляются в поисковиках. Сергей никогда не отказывает в консультациях и помощи. Желаю Божией помощи во всех начинаниях.</p>
+                    
+                    <div class="cd-author">
+                        <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-10.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>Священник Вячеслав Зуев</li>
+                            <li>Главный редактор газеты <a href="http://pravperm.ru" target="_blank">«Православная Пермь»</a></li>
+                        </ul>
+                    </div> <!-- cd-author -->
+                </li>
+    
+                <li class="cd-testimonials-item" style="position: absolute; left: 389px; top: 1789px;">
+                    <p>Долго не решались делать собственный сайт, но Сергей убедил нас в необходимости этого шага. А самое главное, он сумел почувствовать специфику нашей компании и передать это в дизайне и организации сайта. Сайт Усадьбы "Сказка" родился сказочно быстро! Мы продолжаем сотрудничество и в настоящее время. Команда студии "Studio Design" умеет работать оперативно, творчески, мыслит позитивно и всегда идет в ногу со временем. Доверяя администрирование сайта студии, мы знаем, что всегда можем рассчитывать не только на техническую поддержку и оптимизацию, но и на то, что все новинки, появляющиеся  на просторах Интернета в области сайтостроения, обязательно воплотятся и в нашем совместном проекте.  Пусть будет больше проектов хороших и разных! Удачи!</p>
+                    
+                    <div class="cd-author">
+                        <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-11.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>Галина Киричек</li>
+                            <li>администратор Усадьбы  <a href="http://volga-skazka.ru" target="_blank">«Сказка»</a></li>
+                        </ul>
+                    </div> <!-- cd-author -->
+                </li>
+    
+                <li class="cd-testimonials-item" style="position: absolute; left: 0px; top: 1880px;">
+                    <p>Коллектив студи видео производства «Взгляд» благодарит «Studio Design» за качественную и быструю работу по изготовлению нашего сайта www.video64.ru . Сайт выполнен аккуратно и максимально удобно для наших клиентов. Надеемся на дальнейшее плодотворное двухстороннее сотрудничество наших фирм. Спасибо за профессионализм.</p>
+                    
+                    <div class="cd-author">
+                        <img src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/img/avatar-12.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>Андрей Мазуревский</li>
+                            <li>Руководитель студии видео производства <a href="http://s-sd.ru/files/animated404/ru.htm" target="_blank">«Взгляд»</a></li>
+                        </ul>
+                    </div> <!-- cd-author -->
+                </li>
+            </ul>
+        </div>	<!-- cd-testimonials-all-wrapper -->
+    
+        <a href="#0" class="close-btn">Close</a>
+    </div> <!-- cd-testimonials-all -->
         </section>
     </main>
     <footer class="footer" id="footer">
@@ -489,6 +665,12 @@
         </div> <!-- cd-user-modal-container -->
     </div> <!-- cd-user-modal -->
     <script src="scripts/script.js"></script>
+
+
+   <script src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/js/jquery-2.1.1.js"></script>
+   <script src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/js/masonry.pkgd.min.js"></script>
+   <script src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/js/jquery.flexslider-min.js"></script>
+   <script src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html>
 
