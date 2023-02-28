@@ -338,7 +338,8 @@ body {
     font-size: 16px;
     color: #000000;
     outline: none;
-    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
 .price-input::placeholder {
@@ -849,6 +850,8 @@ table {
 /* css reset finish */
 
 /* Стили для формы */
-.form-checkbox {
-    margin: 0 0 10px auto;
+.error {
+    color: red;
+    font-size: 16px;
+    margin-top: -5px;
 }

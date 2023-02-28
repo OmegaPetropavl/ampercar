@@ -343,14 +343,23 @@
                 <div class="price-text">
                     Для уточнения всех деталей бронирования, пожалуйста зарегестрируйтесь.<br> Есть аккаунт? <nav class="main-nav"><ul><li><a class="" href="#0">Войти в аккаунт</a></li></ul></nav>
                 </div>
-                <form class="price-form" name="form"  id="form" onsubmit="return validation()">
+                <form class="price-form" name="form" id="form" onsubmit="return validation()">
                     <input type="text" class="price-input" name="name" id="name" placeholder="Ваше имя">
-                    <div class="error-message"></div>
-                    <input type="text" class="price-input" name="email" id="email" placeholder="Ваш e-mail">
-                    <input type="text" class="price-input"  name="login" id="login" placeholder="Ваш логин">
-                    <input type="password" class="price-input"  name="password1" id="password1" placeholder="Пароль" >
-                    <input type="password" class="price-input"  name="password2" id="password2" placeholder="Повторите пароль">
-                    <div class="form-checkbox"><input type="checkbox"  class="form-checkbox" name="rule-check" id="rule-check">  Я согласен с <a href="privacy-policy.html" style="margin-right: 25px">политикой конфиденциальности</a></div>
+                    <div class="error" id="name-error"></div>
+                    <input type="email" class="price-input" name="email" id="email" placeholder="Ваш e-mail">
+                    <div class="error" id="email-error"></div>
+                    <input type="text" class="price-input" name="login" id="login" placeholder="Ваш логин">
+                    <div class="error" id="login-error"></div>
+                    <input type="password" class="price-input" name="password1" id="password1" placeholder="Пароль">
+                    <div class="error" id="password1-error"></div>
+                    <input type="password" class="price-input" name="password2" id="password2" placeholder="Повторите пароль">
+                    <div class="error" id="password2-error"></div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" class="form-checkbox" name="rule-check" id="rule-check">
+                        Я согласен с <a href="privacy-policy.html" style="margin-right: 25px">политикой конфиденциальности</a>
+                        <div class="error" id="checkbox-error"></div>
+                    </div>
+                
                     <input type="submit" class="button" id="submit" name="submit" value="Отправить форму">
                 </form>
 
