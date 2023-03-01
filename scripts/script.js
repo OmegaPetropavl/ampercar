@@ -22,87 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-// function validation() {
-//     // Получение значений полей формы
-//     const name = document.getElementById("name").value;
-//     const email = document.getElementById("email").value;
-//     const login = document.getElementById("login").value;
-//     const password1 = document.getElementById("password1").value;
-//     const password2 = document.getElementById("password2").value;
-//     const ruleCheck = document.getElementById("rule-check");
-  
-//     // Регулярное выражение для проверки email
-//     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
-//     // Регулярное выражение для проверки логина
-//     const loginPattern = /^[a-zA-Z]{6,}$/;
-  
-//     // Проверка заполнения поля name
-//     if (name === "") {
-//       showError("name", "Необходимо заполнить поле 'Ваше имя'");
-//       return false;
-//     }
-  
-//     // Проверка email
-//     if (!emailPattern.test(email)) {
-//       showError("email", "Некорректный email адрес");
-//       return false;
-//     }
-  
-//     // Проверка логина
-//     if (!loginPattern.test(login)) {
-//       showError("login", "Логин должен содержать не менее 6 символов английского алфавита");
-//       return false;
-//     }
-  
-//     // Проверка соответствия ввода паролей
-//     if (password1 !== password2) {
-//       showError("password2", "Пароли не совпадают");
-//       return false;
-//     }
-  
-//     // Регулярное выражение для проверки пароля
-//     const passwordPattern = /\d/;
-  
-//     // Проверка паттерна пароля
-//     if (!passwordPattern.test(password1)) {
-//       showError("password1", "Пароль должен содержать хотя бы одну цифру");
-//       return false;
-//     }
-  
-//     // Проверка чекбокса
-//     if (!ruleCheck.checked) {
-//       showError("rule-check", "Необходимо принять политику конфиденциальности");
-//       return false;
-//     }
-  
-//     // Успешная валидация формы
-//     alert("Проверка формы прошла успешно, форма отправлена!");
-//     return true;
-//   }
-  
-//   // Функция для отображения ошибок
-//   function showError(inputName, errorMessage) {
-//     const input = document.getElementById(inputName);
-//     const errorContainer = input.parentElement.querySelector(".error-message");
-  
-//     // Отображение ошибки
-//     errorContainer.innerHTML = errorMessage;
-//     errorContainer.style.display = "block";
-  
-//     // Стилизация поля ввода с ошибкой
-//     input.classList.add("invalid");
-  
-//     // Установка обработчика событий на поле ввода для скрытия ошибки при изменении значения
-//     input.addEventListener("input", () => {
-//       errorContainer.style.display = "none";
-//       input.classList.remove("invalid");
-//     });
-//   }
-
-
 function validation() {
   var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
@@ -118,6 +37,22 @@ function validation() {
   var password2Error = document.getElementById("password2-error");
   var checkboxError = document.getElementById("checkbox-error");
 
+
+  var allInputs = document.querySelectorAll("form input");
+    allInputs.forEach(function(input) {
+        input.classList.remove("error-input");
+        input.addEventListener("input", function() {
+            input.classList.remove("error-input");
+            nameError.innerHTML = "";
+            emailError.innerHTML = "";
+            loginError.innerHTML = "";
+            password1Error.innerHTML = "";
+            password2Error.innerHTML = "";
+            phoneError.innerHTML = "";
+            checkboxError.innerHTML = "";
+        });
+    });
+
   // Проверка заполнения поля "Имя"
   if (name == "") {
       nameError.innerHTML = "Необходимо заполнить поле 'Имя'";
@@ -127,17 +62,20 @@ function validation() {
   }
 
   // Проверка ввода email
-  var emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
   if (!emailPattern.test(email)) {
       emailError.innerHTML = "Введите корректный email вида example@mail.com";
+      document.getElementById("email").classList.add("error-input");
       return false;
   } else {
       emailError.innerHTML = "";
+      document.getElementById("email").classList.remove("error-input");
   }
 
+
   // Проверка ввода login
-  var loginPattern = /^[a-zA-Z]{6,}$/;
+  const loginPattern = /^[a-zA-Z]{6,}$/;
 
   if (!loginPattern.test(login)) {
       loginError.innerHTML = "Логин должен содержать не менее 6 символов английского алфавита";
@@ -147,7 +85,7 @@ function validation() {
     }
   
   // Проверка ввода пароля
-  var passwordPattern = /^(?=.*\d)[a-zA-Z\d]{8,}$/;
+  const passwordPattern = /^(?=.*\d)[a-zA-Z\d]{8,}$/;
 
   if (!passwordPattern.test(password1)) {
       password1Error.innerHTML = "Пароль должен содержать не менее 8 символов и хотя бы одну цифру";
@@ -171,15 +109,6 @@ function validation() {
   } else {
       checkboxError.innerHTML = "";
   }
-
-  // Если ошибок нет, очистить сообщения об ошибках
-  nameError.innerHTML = "";
-  emailError.innerHTML = "";
-  loginError.innerHTML = "";
-  password1Error.innerHTML = "";
-  password2Error.innerHTML = "";
-  checkboxError.innerHTML = "";
-
 
 
   alert("Проверка формы прошла успешно, форма отправлена!");
