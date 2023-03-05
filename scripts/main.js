@@ -146,3 +146,14 @@ jQuery.fn.putCursorAtEnd = function() {
 	});
 };
 
+
+let switchmode = document.getElementById("theme-toggle")
+switchmode.onclick = function() {
+    let theme = document.getElementById("light-theme");
+    if (theme.getAttribute("href") == "styles/style.css") {
+        theme.href = "styles/styles-dark.css"
+    } else {
+        theme.href = "styles/style.css"
+    }
+}
+

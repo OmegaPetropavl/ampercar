@@ -6,14 +6,13 @@
     <meta name="description" content="Ampercar.kz company official website">
     <meta name="keywords" content="HTML,CSS,PHP,JavaScript">
     <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Аренда автомобилей и не только!</title>
     <link rel="shortcut icon" href="/images/logo1.png" type="image/png">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" id="light-theme">
     <link rel="stylesheet" href="styles/bootstrap1.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <script src="https://kit.fontawesome.com/8bbcdc20af.js" crossorigin="anonymous"></script>
-    <script src="scripts/lr2.js"></script>
     <script src="scripts/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="scripts/script.js"></script>
@@ -27,7 +26,7 @@
 </head>
 <body>
 
-    <header class="header" id="header">
+    <!-- <header class="header" id="header">
         <div class="container">
             <div class="logo">
                 <a href="https://yandex.kz"><img src="images/logo1.png" alt="Logo"> </a>
@@ -46,10 +45,10 @@
                 </ul>
             </div>
             <nav class="main-nav">
-                <ul>
+                <ul> -->
                     <!-- ссылки на вызов форм -->
-                    <li>
-                        <div class="logsign">
+                    <!-- <li> -->
+                        <!-- <div class="logsign">
                         <a class="cd-signin" href="#0"><img src="images/logsign.png" alt="Logo" title="Вход/Регистрация"></a>
                     </div>
                 </li>
@@ -58,7 +57,55 @@
             </nav>
             
         </div>
-    </header>
+    </header> -->
+
+    <header class="header" id="header">
+        <div class="container">
+          <nav class="navbar navbar-expand-xxxxl navbar-light align-content-sm-between">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="logo">
+                <a class="navbar-brand" href="https://yandex.kz"><img src="images/logo1.png" alt="Logo"></a>
+              </div>
+            <div class="text-end">
+                <button class="btn btn-outline-secondary" id="theme-toggle">Сменить тему</button>
+              </div>
+              
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#cars">Автомобили</a>
+                </li>
+                <li class="nav-item" id="bron">
+                  <a class="nav-link" href="#price">Бронирование авто</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Uslugi.html">Услуги</a>
+                </li>
+                <li class="nav-item">
+                    <nav class="main-nav">
+                        <ul>
+                            <li>
+                                <div class="logsign">
+                                <a class="cd-signin" href="#0"><img src="images/logsign.png" alt="Logo" title="Вход/Регистрация"></a>
+                            </div>
+                        </li>
+                            
+                        </ul>
+                    </nav>
+                </li>
+              </ul>
+              
+            </div>
+            
+          </nav>
+        </div>
+      </header>
+
+
+
+    
 
     <main id="main">
         <section class="main">
@@ -111,32 +158,7 @@
                         </div>
                     </div>
 
-                    <div class="car-item">
-                        <div class="car-item-image">
-                            <img src="images/1.png" alt="Image 1">
-                        </div>
-                        <div class="car-item-title">Lamborghini Huracan Spyder</div>
-                        <div class="car-item-info">
-                            <div class="car-item-point">
-                                <img src="images/gear.png" alt="Gear">
-                                <div>Привод</div>
-                                <div>Полный</div>
-                            </div>
-                            <div class="car-item-point">
-                                <img src="images/wheel.png" alt="Wheel">
-                                <div>Двигатель</div>
-                                <div>5.2 л.с</div>
-                            </div>
-                            <div class="car-item-point">
-                                <img src="images/belt.png" alt="Belt">
-                                <div>Кол-во мест</div>
-                                <div>2</div>
-                            </div>
-                        </div>
-                        <div class="car-item-action">
-                            <button class="button car-button">Забронировать</button>
-                        </div>
-                    </div>
+                    
 
                     <div class="car-item">
                         <div class="car-item-image">
@@ -250,7 +272,7 @@
                         <div class="car-item-image">
                             <img src="images/6.png" alt="Image 6">
                         </div>
-                        <div class="car-item-title">Аренда Chevrolet Camaro</div>
+                        <div class="car-item-title">Chevrolet Camaro</div>
                         <div class="car-item-info">
                             <div class="car-item-point">
                                 <img src="images/gear.png" alt="Gear">
@@ -275,9 +297,9 @@
 
                     <div class="car-item">
                         <div class="car-item-image">
-                            <img src="images/6.png" alt="Image 6">
+                            <img src="images/touareg.png" alt="Image 7">
                         </div>
-                        <div class="car-item-title">Аренда Chevrolet Camaro</div>
+                        <div class="car-item-title">Volkswagen Touareg</div>
                         <div class="car-item-info">
                             <div class="car-item-point">
                                 <img src="images/gear.png" alt="Gear">
@@ -287,7 +309,7 @@
                             <div class="car-item-point">
                                 <img src="images/wheel.png" alt="Wheel">
                                 <div>Двигатель</div>
-                                <div>2.0 л.с</div>
+                                <div>4.2 л.</div>
                             </div>
                             <div class="car-item-point">
                                 <img src="images/belt.png" alt="Belt">
@@ -299,26 +321,55 @@
                             <button class="button car-button">Забронировать</button>
                         </div>
                     </div>
+
                     <div class="car-item">
                         <div class="car-item-image">
-                            <img src="images/6.png" alt="Image 6">
+                            <img src="images/ChevyPrisma.png" alt="Image 7">
                         </div>
-                        <div class="car-item-title">Аренда Chevrolet Camaro</div>
+                        <div class="car-item-title">Chevrolet Prisma</div>
                         <div class="car-item-info">
                             <div class="car-item-point">
                                 <img src="images/gear.png" alt="Gear">
                                 <div>Привод</div>
-                                <div>Полный</div>
+                                <div>Передний</div>
                             </div>
                             <div class="car-item-point">
                                 <img src="images/wheel.png" alt="Wheel">
                                 <div>Двигатель</div>
-                                <div>2.0 л.с</div>
+                                <div>2.0 л.</div>
                             </div>
                             <div class="car-item-point">
                                 <img src="images/belt.png" alt="Belt">
                                 <div>Кол-во мест</div>
-                                <div>4</div>
+                                <div>5</div>
+                            </div>
+                        </div>
+                        <div class="car-item-action">
+                            <button class="button car-button">Забронировать</button>
+                        </div>
+                    </div>
+                
+
+                    <div class="car-item">
+                        <div class="car-item-image">
+                            <img src="images/mcq.png" alt="Image 8">
+                        </div>
+                        <div class="car-item-title">Lightning McQueen</div>
+                        <div class="car-item-info">
+                            <div class="car-item-point">
+                                <img src="images/gear.png" alt="Gear">
+                                <div>Привод</div>
+                                <div>Задний</div>
+                            </div>
+                            <div class="car-item-point">
+                                <img src="images/wheel.png" alt="Wheel">
+                                <div>Двигатель</div>
+                                <div>6.0 л.</div>
+                            </div>
+                            <div class="car-item-point">
+                                <img src="images/belt.png" alt="Belt">
+                                <div>Кол-во мест</div>
+                                <div>2</div>
                             </div>
                         </div>
                         <div class="car-item-action">
@@ -337,6 +388,35 @@
                     allowfullscreen></iframe>
         </div>
 
+        
+          
+        <!-- <div id="myCarousel" class="carousel slide container" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/1.png" class="d-block w-100" alt="Image 1">
+              </div>
+              <div class="carousel-item">
+                <img src="https://picsum.photos/1200/800?random=2" class="d-block w-100" alt="Image 2">
+              </div>
+              <div class="carousel-item">
+                <img src="https://picsum.photos/1200/800?random=3" class="d-block w-100" alt="Image 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div> -->
+          
         <section class="price" id="price">
             <div class="container">
                 <h2 class="sub-title">Узнать цену и забронировать</h2>
@@ -596,6 +676,10 @@
         <a href="#0" class="close-btn">Close</a>
     </div> <!-- cd-testimonials-all -->
         </section>
+        <section id="maps">
+            <h2 class="sub-title" id="#maps-title">Мы находимся вот тут</h2>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aac2c20481bedd43e3d5bf595fa52713e124e12afadfc283ca0a0e9ca609a4c25&amp;width=792&amp;height=586&amp;lang=ru_RU&amp;scroll=true"></script>
+        </section>    
     </main>
     <footer class="footer" id="footer">
         <div class="container-xxl">
@@ -678,7 +762,7 @@
             </div> <!-- cd-signup -->
         </div> <!-- cd-user-modal-container -->
     </div> <!-- cd-user-modal -->
-    <script src="scripts/script.js"></script>
+    <script defer src="scripts/script.js"></script>
 
 
    <script src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/js/jquery-2.1.1.js"></script>

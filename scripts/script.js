@@ -1,3 +1,6 @@
+
+
+
 document.getElementById("main-action").onclick = function () {
     document.getElementById("cars").scrollIntoView({behavior:"smooth"})
 }
@@ -114,6 +117,9 @@ function validation() {
   alert("Проверка формы прошла успешно, форма отправлена!");
   return true;
 }
+
+//Скрипт смены темы
+
 
 
 
