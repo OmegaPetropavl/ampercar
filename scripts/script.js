@@ -1,6 +1,3 @@
-
-
-
 document.getElementById("main-action").onclick = function () {
     document.getElementById("cars").scrollIntoView({behavior:"smooth"})
 }
@@ -18,10 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         layer.style.transform = 'translate3d(' + ((event.clientX * 0.4) / 9) + 'px,' + ((event.clientY * 0.4) / 9) + 'px,0px)';
     });
 
-    const elem = document.querySelector(".main");
-    document.addEventListener('scroll', () => {
-        elem.style.backgroundPositionX = '0' + (0.2 * window.pageYOffset) + 'px';
-    })
+    
 });
 
 
@@ -119,7 +113,21 @@ function validation() {
 }
 
 //Скрипт смены темы
-
+var switchmode = document.getElementById("theme-toggle")
+switchmode.onclick = function() {
+    var theme = document.getElementById("light-theme");
+    var logo1 = document.getElementById("logo-first");
+    var logo2 = document.getElementById("logo-second");
+    if (theme.getAttribute("href") == "styles/style.css") {
+        theme.href = "styles/styles-dark.css";
+        logo1.src = "/images/logo1_dark.png";
+        logo2.src = "/images/logo1_dark.png";
+    } else {
+        theme.href = "styles/style.css";
+        logo1.src = "/images/logo1.png";
+        logo2.src = "/images/logo1.png";
+    }
+}
 
 
 

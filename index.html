@@ -8,56 +8,24 @@
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Аренда автомобилей и не только!</title>
-    <link rel="shortcut icon" href="/images/logo1.png" type="image/png">
     <link rel="stylesheet" href="styles/style.css" id="light-theme">
     <link rel="stylesheet" href="styles/bootstrap1.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <script src="https://kit.fontawesome.com/8bbcdc20af.js" crossorigin="anonymous"></script>
     <script src="scripts/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="scripts/script.js"></script>
+    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/script.js"></script>
     
      <!-- CSS reset -->
-	<link rel="stylesheet" href="styles/reviews.css"> <!-- Resource style -->
 	
   	
 </head>
 <body>
 
-    <!-- <header class="header" id="header">
-        <div class="container">
-            <div class="logo">
-                <a href="https://yandex.kz"><img src="images/logo1.png" alt="Logo"> </a>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li class="menu-item">
-                        <a href="#cars">Автомобили</a>
-                    </li>
-                    <li class="menu-item" id="bron">
-                        <a href="#price">Бронирование авто</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="Uslugi.html">Услуги</a>
-                    </li>
-                </ul>
-            </div>
-            <nav class="main-nav">
-                <ul> -->
-                    <!-- ссылки на вызов форм -->
-                    <!-- <li> -->
-                        <!-- <div class="logsign">
-                        <a class="cd-signin" href="#0"><img src="images/logsign.png" alt="Logo" title="Вход/Регистрация"></a>
-                    </div>
-                </li>
-                    
-                </ul>
-            </nav>
-            
-        </div>
-    </header> -->
+    
 
     <header class="header" id="header">
         <div class="container">
@@ -66,7 +34,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="logo">
-                <a class="navbar-brand" href="https://yandex.kz"><img src="images/logo1.png" alt="Logo"></a>
+                <a class="navbar-brand" href="https://yandex.kz"><img id="logo-first" src="images/logo1.png" alt="Logo"></a>
               </div>
             <div class="text-end">
                 <button class="btn btn-outline-secondary" id="theme-toggle">Сменить тему</button>
@@ -87,8 +55,8 @@
                     <nav class="main-nav">
                         <ul>
                             <li>
-                                <div class="logsign">
-                                <a class="cd-signin" href="#0"><img src="images/logsign.png" alt="Logo" title="Вход/Регистрация"></a>
+                            <div class="logsign">
+                                <a class="cd-signin" href="#0" title="Вход/Регистрация">Вход/Регистрация</a>
                             </div>
                         </li>
                             
@@ -153,6 +121,9 @@
                                 <div>2</div>
                             </div>
                         </div>
+                        <div class="car-item-price">
+                            <h3 class="price">От 7000тг/час</h3>
+                        </div>
                         <div class="car-item-action">
                             <button class="button car-button">Забронировать</button>
                         </div>
@@ -174,13 +145,16 @@
                             <div class="car-item-point">
                                 <img src="images/wheel.png" alt="Wheel">
                                 <div>Двигатель</div>
-                                <div>6.2 л.с</div>
+                                <div>6.2 л.</div>
                             </div>
                             <div class="car-item-point">
                                 <img src="images/belt.png" alt="Belt">
                                 <div>Кол-во мест</div>
                                 <div>2</div>
                             </div>
+                        </div>
+                        <div class="car-item-price">
+                            <h3 class="price">От 5000тг/час</h3>
                         </div>
                         <div class="car-item-action">
                             <button class="button car-button">Забронировать</button>
@@ -201,13 +175,16 @@
                             <div class="car-item-point">
                                 <img src="images/wheel.png" alt="Wheel">
                                 <div>Двигатель</div>
-                                <div>3.9 л.с</div>
+                                <div>3.9 л.</div>
                             </div>
                             <div class="car-item-point">
                                 <img src="images/belt.png" alt="Belt">
                                 <div>Кол-во мест</div>
                                 <div>4</div>
                             </div>
+                        </div>
+                        <div class="car-item-price">
+                            <h3 class="price">От 6000тг/час</h3>
                         </div>
                         <div class="car-item-action">
                             <button class="button car-button">Забронировать</button>
@@ -228,13 +205,16 @@
                             <div class="car-item-point">
                                 <img src="images/wheel.png" alt="Wheel">
                                 <div>Двигатель</div>
-                                <div>4.0 л.с</div>
+                                <div>4.0 л.</div>
                             </div>
                             <div class="car-item-point">
                                 <img src="images/belt.png" alt="Belt">
                                 <div>Кол-во мест</div>
                                 <div>5</div>
                             </div>
+                        </div>
+                        <div class="car-item-price">
+                            <h3 class="price">От 10000тг/час</h3>
                         </div>
                         <div class="car-item-action">
                             <button class="button car-button">Забронировать</button>
@@ -255,13 +235,16 @@
                             <div class="car-item-point">
                                 <img src="images/wheel.png" alt="Wheel">
                                 <div>Двигатель</div>
-                                <div>5.2 л.с</div>
+                                <div>5.2 л.</div>
                             </div>
                             <div class="car-item-point">
                                 <img src="images/belt.png" alt="Belt">
                                 <div>Кол-во мест</div>
                                 <div>2</div>
                             </div>
+                        </div>
+                        <div class="car-item-price">
+                            <h3 class="price">От 9000тг/час</h3>
                         </div>
                         <div class="car-item-action">
                             <button class="button car-button">Забронировать</button>
@@ -282,13 +265,16 @@
                             <div class="car-item-point">
                                 <img src="images/wheel.png" alt="Wheel">
                                 <div>Двигатель</div>
-                                <div>2.0 л.с</div>
+                                <div>2.0 л.</div>
                             </div>
                             <div class="car-item-point">
                                 <img src="images/belt.png" alt="Belt">
                                 <div>Кол-во мест</div>
                                 <div>4</div>
                             </div>
+                        </div>
+                        <div class="car-item-price">
+                            <h3 class="price">От 5000тг/час</h3>
                         </div>
                         <div class="car-item-action">
                             <button class="button car-button">Забронировать</button>
@@ -314,8 +300,11 @@
                             <div class="car-item-point">
                                 <img src="images/belt.png" alt="Belt">
                                 <div>Кол-во мест</div>
-                                <div>4</div>
+                                <div>5</div>
                             </div>
+                        </div>
+                        <div class="car-item-price">
+                            <h3 class="price">От 7000тг/час</h3>
                         </div>
                         <div class="car-item-action">
                             <button class="button car-button">Забронировать</button>
@@ -344,6 +333,9 @@
                                 <div>5</div>
                             </div>
                         </div>
+                        <div class="car-item-price">
+                            <h3 class="price">От 4000тг/час</h3>
+                        </div>
                         <div class="car-item-action">
                             <button class="button car-button">Забронировать</button>
                         </div>
@@ -371,6 +363,9 @@
                                 <div>Кол-во мест</div>
                                 <div>2</div>
                             </div>
+                        </div>
+                        <div class="car-item-price">
+                            <h3 class="price">От 20000тг/час</h3>
                         </div>
                         <div class="car-item-action">
                             <button class="button car-button">Забронировать</button>
@@ -435,10 +430,10 @@
                     <input type="password" class="price-input" name="password2" id="password2" placeholder="Повторите пароль">
                     <div class="error" id="password2-error"></div>
                     <div class="radio-form">
-                        <input type="radio" name="group1" value="Male"> Мужчина<br>
+                        <input type="radio" class="text-radio"  name="group1" value="Male"> Мужчина<br>
                         <input type="radio" name="group1" value="Female" checked> Женщина<br>
                     </div>
-                    <hr>
+                    <hr class="dark-hr">
                     <div class="form-checkbox">
                         <input type="checkbox" class="form-checkbox" name="rule-check" id="rule-check">
                         Я согласен с <a href="privacy-policy.html" style="margin-right: 25px">политикой конфиденциальности</a>
@@ -684,7 +679,7 @@
     <footer class="footer" id="footer">
         <div class="container-xxl">
             <div class="logo">
-                <img src="images/logo1.png" alt="Logo">
+                <img id="logo-second" src="/images/logo1.png" alt="Logo">
             </div>
             <div class="menu">
                 <a href="agreement.html" style="margin-right: 25px">Пользовательское соглашение</a>
@@ -752,7 +747,7 @@
                     </p>
                     <p class="fieldset">
                         <input type="checkbox" id="accept-terms">
-                        <label for="accept-terms">Я согласен с <a href="#0">Условиями</a></label>
+                        <label for="accept-terms">Я согласен с <a href="privacy-policy.html">Политикой конфиденциальности</a></label>
                     </p>
                     <p class="fieldset">
                         <input class="full-width has-padding" type="submit" value="Создать аккаунт">
