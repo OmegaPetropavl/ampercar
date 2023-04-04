@@ -6,8 +6,6 @@ jQuery(document).ready(function($){
 		$form_modal_tab = $('.cd-switcher'),
 		$tab_login = $form_modal_tab.children('li').eq(0).children('a'),
 		$tab_signup = $form_modal_tab.children('li').eq(1).children('a'),
-		$forgot_password_link = $form_login.find('.cd-form-bottom-message a'),
-		$back_to_login_link = $form_forgot_password.find('.cd-form-bottom-message a'),
 		$main_nav = $('.main-nav');
 
 	//открыть модальное окно
@@ -57,17 +55,7 @@ jQuery(document).ready(function($){
 		$password_field.putCursorAtEnd();
 	});
 
-	//показать форму востановления пароля
-	$forgot_password_link.on('click', function(event){
-		event.preventDefault();
-		forgot_password_selected();
-	});
-
-	//Вернуться на страницу входа с формы востановления пароля
-	$back_to_login_link.on('click', function(event){
-		event.preventDefault();
-		login_selected();
-	});
+	
 
 	function login_selected(){
 		$form_login.addClass('is-selected');
@@ -147,13 +135,5 @@ jQuery.fn.putCursorAtEnd = function() {
 };
 
 
-let switchmode = document.getElementById("theme-toggle")
-switchmode.onclick = function() {
-    let theme = document.getElementById("light-theme");
-    if (theme.getAttribute("href") == "styles/style.css") {
-        theme.href = "styles/styles-dark.css"
-    } else {
-        theme.href = "styles/style.css"
-    }
-}
+
 
