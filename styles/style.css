@@ -14,7 +14,9 @@
     font-weight: bold;
 }
 
-
+.footer .menu a {
+  text-decoration: none;
+}
 
 #header .logo img {
     vertical-align: bottom;
@@ -73,6 +75,7 @@
 
 .menu {
     margin-left: 100px;
+    text-decoration: none;
 }
 
 .menu ul {

@@ -36,7 +36,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="logo">
-                <a class="navbar-brand" href="https://yandex.kz"><img id="logo-first" src="images/logo1.png" alt="Logo"></a>
+                <a class="navbar-brand" href="#"><img id="logo-first" src="images/logo1.png" alt="Logo"></a>
             </div>
             <div class="text-end">
                 <button class="btn btn-outline-secondary" id="theme-toggle">Сменить тему</button>
@@ -50,7 +50,7 @@
                   <a class="nav-link" href="#price">Бронирование авто</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="Uslugi.html">Услуги</a>
+                  <a class="nav-link" href="/Uslugi.php">Услуги</a>
                 </li>
                 <li class="nav-item">
                     <nav class="main-nav">
@@ -680,9 +680,9 @@
                 <img id="logo-second" src="/images/logo1.png" alt="Logo">
             </div>
             <div class="menu">
-                <a href="agreement.html" style="margin-right: 25px">Пользовательское соглашение</a>
-                <a href="privacy-policy.html" style="margin-right: 25px">Политика конфиденциальности</a>
-                <a href="contract.html" style="margin-right: 25px">Договор</a>
+                <a href="agreement.php" style="margin-right: 25px">Пользовательское соглашение</a>
+                <a href="privacy-policy.php" style="margin-right: 25px">Политика конфиденциальности</a>
+                <a href="contract.php" style="margin-right: 25px">Договор</a>
             </div>
             <div class="rights">© 2023 Ampercar.kz</div>
         </div>
@@ -756,10 +756,7 @@
     <script defer src="scripts/script.js"></script>
 
 
-   <script src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/js/jquery-2.1.1.js"></script>
-   <script src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/js/masonry.pkgd.min.js"></script>
-   <script src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/js/jquery.flexslider-min.js"></script>
-   <script src="https://s-sd.ru/files/slider-reviews-customer-site-to-css3/js/main.js"></script> <!-- Resource jQuery -->
+   
 </body>
 </html>
 
