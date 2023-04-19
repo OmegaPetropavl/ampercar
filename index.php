@@ -1,5 +1,5 @@
 <?php
-include ("connect.php");
+include ("connect.php")
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -54,13 +54,16 @@ include ("connect.php");
                   <a class="nav-link" href="/Uslugi.php">Услуги</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="/login.php">Вход в админку</a>
+                </li>
+                <li class="nav-item">
                     <nav class="main-nav">
                         <ul>
                             <li>
                             <div class="logsign">
                                 <a class="cd-signin" href="#0" title="Вход/Регистрация">Вход/Регистрация</a>
                             </div>
-                        </li>    
+                            </li>    
                         </ul>
                     </nav>
                 </li>
@@ -232,17 +235,15 @@ include ("connect.php");
                 <li><a href="#0">Регистрация</a></li>
             </ul>
             <div id="cd-login"> <!-- форма входа -->
-                <form class="cd-form">
+                <form class="cd-form" action>
                     <p class="fieldset">
-                        <label class="image-replace cd-email" for="signin-email">E-mail</label>
-                        <input class="full-width has-padding has-border" id="signin-email" type="email"
-                               placeholder="E-mail">
+                        <label class="image-replace cd-email" for="signin-email">Login</label>
+                        <input class="full-width has-padding has-border" id="signin-email" type="Login" name="login" placeholder="Логин">
                         <span class="cd-error-message">Здесь сообщение об ошибке!</span>
                     </p>
                     <p class="fieldset">
                         <label class="image-replace cd-password" for="signin-password">Пароль</label>
-                        <input class="full-width has-padding has-border" id="signin-password" type="text"
-                               placeholder="Пароль">
+                        <input class="full-width has-padding has-border" id="signin-password" type="Password" name="password" placeholder="Пароль">
                         <a href="#0" class="hide-password">Скрыть</a>
                         <span class="cd-error-message">Здесь сообщение об ошибке!</span>
                     </p>
@@ -251,7 +252,7 @@ include ("connect.php");
                         <label for="remember-me">Запомнить меня</label>
                     </p>
                     <p class="fieldset">
-                        <input class="full-width" type="submit" value="Войти">
+                        <input class="full-width" type="submit" name="login" value="Войти">
                     </p>
                 </form>
             </div> <!-- конец блока с формой входа -->
