@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Адмнистративная панель</title>
+        <title>Административная панель</title>
         <link rel="stylesheet" href="styles/bootstrap1.css">
     </head>
     <body>
@@ -13,35 +13,44 @@
             <?php echo "Добро пожаловать, " . $_SESSION["Name"]?>
             <br>
             <a href="/logout.php">Выйти</a>
+            <a href="/admin.php">Главная страница</a>
+            <br>
+            <br>
+            <br>
             <br>
             <?php 
-            $sql = $conn -> prepare ("SELECT * FROM Car");
-            $sql -> execute();
-            $res= $sql -> fetch(PDO::FETCH_OBJ);
-            $id = $res->Car_ID;
-            print($id);
-            print_r($res);
-            ?> 
-            <?php while ($row =$res -> fetch()) {
-            ECHO "<form action='' method='post'>
-                <input type='text' name='Name' value='<?php echo $res-> Car_Name ?>'>
-                <input type='text' name='Gear' value='<?php echo $res-> Gear ?>'>
-                <input type='text' name='Seatbells' value='<?php echo $res-> Seatbells ?>'>
-                <input type='text' name='Engine' value='<?php echo $res-> Engine ?>'>
-                <input type='text' name='PricePerHour' value='<?php echo $res-> PricePerHour ?>'>
-                <input type='text' name='Image' value='<?php echo $res-> Image ?>'>
-                <input type='submit' value='Сохранить'>
-            </form>";
-            }  ?>
-            <?php 
-            $Name = $_POST["Name"];
-            $Gear = $_POST["Gear"];
-            $Seatbells = $_POST["Seatbells"];
-            $Engine = $_POST["Engine"];
-            $PricePerHour = $_POST["PricePerHour"];
-            $Image = $_POST["Image"];
-            $row = "UPDATE Car SET  Name:"
-            ?>
+           $sql = $conn -> prepare ("SELECT * FROM Car");
+           $sql -> execute();
+           $results = $sql -> fetchAll(PDO::FETCH_OBJ); // fetchAll() method retrieves all the rows
+           foreach ($results as $res) {
+                echo "<form action='/admin/car/caredit.php' method='post' enctype='multipart/form-data'>
+                    <label for='Car_Name'>". $res->Car_ID ."</label> <br>
+                    <input type='hidden' name='Car_ID' value='". $res->Car_ID ."'>
+                    <label for='Car_Name'>Название автомобиля:</label>
+                    <input type='text' id='Car_Name' name='Car_Name' value='". $res->Car_Name ."'><br>
+                    
+                    <label for='Gear'>Трансмиссия:</label>
+                    <input type='text' id='Gear' name='Gear' value='". $res->Gear ."'><br>
+                    
+                    <label for='Seatbells'>Количество ремней безопасности:</label>
+                    <input type='text' id='Seatbells' name='Seatbells' value='". $res->Seatbells ."'><br>
+                    
+                    <label for='Engine'>Двигатель:</label>
+                    <input type='text' id='Engine' name='Engine' value='". $res->Engine ."'><br>
+                    
+                    <label for='PricePerHour'>Цена в час:</label>
+                    <input type='text' id='PricePerHour' name='PricePerHour' value='". $res->PricePerHour ."'><br>
+                    
+                    <label for='Image'>Изображение:</label>
+                    <input type='text' id='Image' name='Image' value='". $res->Image ."'><br>
+                    <p>
+                    <input type='file'  name='im' value='". $res->Image ."'><br>
+                    </p>
+                    <input type='submit' name='save' value='Сохранить'> 
+                </form>
+                    <img src='/images/". $res ->Image ."'width='300'>";
+        } ?>
+            
             
         <?php else: 
         echo '<h2>Restricted area, get away from here!</h2>';

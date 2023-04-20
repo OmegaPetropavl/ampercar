@@ -128,7 +128,3 @@ switchmode.onclick = function() {
         logo2.src = "/images/logo1.png";
     }
 }
-
-
-
-

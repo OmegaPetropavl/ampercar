@@ -1,11 +1,10 @@
 <?php
 include ("connect.php");
 session_start();
-if(isset($_SESSION['Login'])) {
-    header("Location: /welcome.php");
-    exit();
+if (!isset($_SESSION["Login"])) {
+    header("Location: /login.php"); // Перенаправляем на страницу авторизации, если нет сессии
+    exit;
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -62,14 +61,21 @@ if(isset($_SESSION['Login'])) {
                 <li class="nav-item">
                   <a class="nav-link" href="/login.php">Вход в админку</a>
                 </li>
-                
-
                 <li class="nav-item">
                     <nav class="main-nav">
                         <ul>
                             <li>
-                            <button id="loginBtn">Войти</button>
-                            </li>    
+                            <li><form method="post">
+                                <input type="submit" name="logout" value="Выйти">
+                            </form></li>
+                            </li>   
+                            <?php session_start();
+                            if (isset($_POST['logout'])) {
+                                session_unset(); // удаляем переменные сессии
+                                session_destroy(); // удаляем сессию
+                                header('Location: /index.php'); // перенаправляем на страницу входа
+                            }
+                            ?> 
                         </ul>
                     </nav>
                 </li>
@@ -156,60 +162,7 @@ if(isset($_SESSION['Login'])) {
           
         
           
-        <section class="price" id="price">
-            <div class="container">
-                <h2 class="sub-title">Узнать цену и забронировать</h2>
-                <div class="price-text">
-                    Для уточнения всех деталей бронирования, пожалуйста зарегестрируйтесь.<br> Есть аккаунт? <nav class="main-nav"><ul><li><a class="" href="#0">Войти в аккаунт</a></li></ul></nav>
-                </div>
-                <form class="price-form" action='' name="form" id="form"  method="post" onsubmit="return validation()">
-                    <input type="text" class="price-input" name="FIO" id="name" placeholder="Ваше ФИО">
-                    <div class="error" id="name-error"></div>
-                    <input type="email" class="price-input" name="Email" id="email" placeholder="Ваш e-mail">
-                    <div class="error" id="email-error"></div>
-                    <input type="text" class="price-input" name="Login" id="login" placeholder="Ваш логин">
-                    <div class="error" id="login-error"></div>
-                    <input type="text" class="price-input" name="Phone" id="login" placeholder="Ваш телефон">
-                    <div class="error" id="login-error"></div>
-                    <input type="password" class="price-input" name="Password" id="password1" placeholder="Пароль">
-                    <div class="error" id="password1-error"></div>
-                    <input type="password" class="price-input" name="password2" id="password2" placeholder="Повторите пароль">
-                    <div class="error" id="password2-error"></div>
-                    <hr class="dark-hr">
-                    <div class="form-checkbox">
-                        <input type="checkbox" class="form-checkbox" name="rule-check" id="rule-check">
-                        Я согласен с <a href="privacy-policy.html" style="margin-right: 25px">политикой конфиденциальности</a>
-                        <div class="error" id="checkbox-error"></div>
-                    </div>
-                    <input type="submit" class="button" id="submit" name="register" value="Отправить форму">
-                </form>
-                <?php if (isset($_POST["register"])) {
-                    $FIO= $_POST["FIO"];
-                    $Email= $_POST["Email"];
-                    $Login= $_POST["Login"];
-                    $Phone= $_POST["Phone"];
-                    $Password= $_POST["Password"];
-                    $sql = "INSERT INTO `Client` (`FIO`, `Email`, `Login`, `Password`, `Phone`) VALUES (:FIO, :Email, :Login, :Password, :Phone)";
-                    $res = $conn->prepare($sql);
-                    $res->bindParam(':FIO', $FIO);
-                    $res->bindParam(':Email', $Email);
-                    $res->bindParam(':Login', $Login);
-                    $res->bindParam(':Password', $Password);
-                    $res->bindParam(':Phone', $Phone);
-                    $res->execute();
-                    // создание сессии
-                    session_start();
-                    $_SESSION['Login'] = $Login;
-                    header ('Location:/welcome.php');
-                    exit();
-                }
-                    
-                    
-                ?>
-
-                <img src="images/rolls.png" alt="Rolls" class="price-image">
-            </div>
-        </section>
+        
 
         
         <section id="maps">
@@ -234,102 +187,6 @@ if(isset($_SESSION['Login'])) {
 
 
     
-
-    <!-- Модальное окно -->
-    <div id="loginModal" class="modal">
-    <!-- Контент модального окна -->
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Вход</h2>
-        <form method="post" action="">
-        <label for="login">Логин:</label>
-        <input type="text" id="login" name="Login" required>
-        <br>
-        <label for="password">Пароль:</label>
-        <input type="password" id="password" name="Password" required>
-        <br>
-        <input type="submit" name="loginka" value="Войти">
-        </form>
-    </div>
-    </div>
-
-    <!-- Стили модального окна -->
-    <style>
-        .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 30%;
-        }
-
-        .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-        }
-    </style>
-
-    <!-- Скрипт для открытия и закрытия модального окна -->
-    <script>
-        var modal = document.getElementById("loginModal");
-        var btn = document.getElementById("loginBtn");
-        var span = document.getElementsByClassName("close")[0];
-
-        btn.onclick = function() {
-        modal.style.display = "block";
-        }
-
-        span.onclick = function() {
-        modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-        }
-    </script>
-        
-    <?php
-        if (isset($_POST["loginka"])) {
-            $Login= $_POST["Login"];
-            $Password= $_POST["Password"];
-            $sql = "SELECT * FROM `Client` WHERE `Login` = :Login AND `Password` = :Password";
-            $res = $conn->prepare($sql);
-            $res->bindParam(':Login', $Login);
-            $res->bindParam(':Password', $Password);
-            $res->execute();
-            $count = $res->rowCount();
-            if ($count == 1) {
-                $_SESSION["Login"] = $Login;
-                header('Location: /welcome.php');
-                exit();
-            } else {
-                echo "<script>alert('Неправильный логин или пароль');</script>";
-            }
-        }
-    ?>
     <script defer src="scripts/script.js"></script>
 </body>
 </html>

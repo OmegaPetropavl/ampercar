@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Адмнистративная панель</title>
+        <title>Административная панель</title>
         <link rel="stylesheet" href="styles/bootstrap1.css">
     </head>
     <body>
