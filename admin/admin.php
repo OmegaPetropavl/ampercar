@@ -1,5 +1,5 @@
-<?php require_once '../connect.php';?>
 <?php session_start();?>
+<?php require_once '../connect.php';?>
 <?php
 $login =$_POST["Login"];
 $password =$_POST["Password"];
