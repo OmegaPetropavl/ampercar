@@ -235,27 +235,26 @@ if(isset($_SESSION['Login'])) {
 
     
 
-    <!-- Модальное окно -->
     <div id="loginModal" class="modal">
     <!-- Контент модального окна -->
     <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Вход</h2>
         <form method="post" action="">
-        <label for="login">Логин:</label>
-        <input type="text" id="login" name="Login" required>
-        <br>
-        <label for="password">Пароль:</label>
-        <input type="password" id="password" name="Password" required>
-        <br>
-        <input type="submit" name="loginka" value="Войти">
+            <label for="login">Логин:</label>
+            <input type="text" id="login" name="Login" required>
+            <br>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="Password" required>
+            <br>
+            <input type="submit" name="loginka" value="Войти">
         </form>
     </div>
-    </div>
+</div>
 
-    <!-- Стили модального окна -->
-    <style>
-        .modal {
+<!-- Стили модального окна -->
+<style>
+    .modal {
         display: none;
         position: fixed;
         z-index: 1;
@@ -265,30 +264,45 @@ if(isset($_SESSION['Login'])) {
         height: 100%;
         overflow: auto;
         background-color: rgba(0, 0, 0, 0.4);
-        }
+    }
 
-        .modal-content {
+    .modal-content {
         background-color: #fefefe;
         margin: 15% auto;
         padding: 20px;
         border: 1px solid #888;
         width: 30%;
-        }
+    }
 
-        .close {
+    .close {
         color: #aaa;
         float: right;
         font-size: 28px;
         font-weight: bold;
-        }
+    }
 
-        .close:hover,
-        .close:focus {
+    .close:hover,
+    .close:focus {
         color: black;
         text-decoration: none;
         cursor: pointer;
-        }
-    </style>
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+
+    
+</style>
 
     <!-- Скрипт для открытия и закрытия модального окна -->
     <script>
@@ -324,6 +338,7 @@ if(isset($_SESSION['Login'])) {
             if ($count == 1) {
                 $_SESSION["Login"] = $Login;
                 header('Location: /welcome.php');
+                echo '<meta HTTP-EQUIV="Refresh" Content="0; URL=/welcome.php">';
                 exit();
             } else {
                 echo "<script>alert('Неправильный логин или пароль');</script>";
