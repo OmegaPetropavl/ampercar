@@ -6,6 +6,33 @@ if (!isset($_SESSION["Login"])) {
     exit;
 }
 ?>
+<?php 
+try {
+    // Подготовить SQL запрос с использованием параметров для предотвращения атаки SQL инъекций
+    $sql1 = "SELECT C_ID FROM Client WHERE Login = :login";
+    $stmt = $conn->prepare($sql1);
+
+    // Привязать параметры к запросу
+    $stmt->bindParam(':login', $_SESSION['Login']);
+
+    // Выполнить запрос
+    $stmt->execute();
+
+    // Проверить наличие результата
+    if ($stmt->rowCount() > 0) {
+        // Извлечь результаты
+        $row1 = $stmt->fetch();
+        $c_id = $row1['C_ID'];
+        $status ='В процессе';
+    } else {
+        // Обработать случай отсутствия результата
+        echo "Результат не найден";
+    }
+} catch (PDOException $e) {
+    // Обработать ошибку
+    echo "Ошибка: " . $e->getMessage();
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -141,14 +168,214 @@ if (!isset($_SESSION["Login"])) {
                             <h3 class='price'>От " . $row["PricePerHour"]. "тг/час</h3>
                         </div>
                         <div class='car-item-action'>
-                            <button class='button car-button'>Забронировать</button>
+                            <button href='' data-carname= ". $row ["Car_ID"] ." data-priceperhour= ". $row ["PricePerHour"] ." id='contractBtn' class='button car-button'>Забронировать</button>
                         </div>
                     </div>
-                ";}
+                ";
+                ECHO "<div class='modal' id='contractModal" . $row["Car_ID"] . "'>
+            <div class='modal-content'>
+                <h2>Договор аренды автомобиля</h2>
+                <form id='contractForm" . $row["Car_ID"] . "' method='post'>
+                    <input type='hidden' name='carid' value='" . $row["Car_ID"] . "'>
+                    <div>
+                        <label for='price'>Цена в час:</label>
+                        <input type='text' name='price' id='price' value='" . $row["PricePerHour"] ."' readonly>
+                    </div>
+                    <div>
+                        <label for='start_date'>Дата начала аренды:</label>
+                        <input type='datetime-local' name='start_date' id='start_date' required>
+                    </div>
+                    <div>
+                        <label for='hours'>Количество часов аренды:</label>
+                        <input type='number' name='hours' id='hours' min='1' required>
+                    </div>
+                    <div>
+                        <label for='total_price'>Итоговая сумма:</label>
+                        <input type='text' name='total_price' id='total_price' readonly>
+                    </div>
+                    <button type='submit' name='submitform'>Отправить</button>
+                </form>
+            </div>
+        </div>";
+             }
                 ?>
                 </div>
             </div>
-        </section>
+    
+   <?php 
+
+?>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.car-button').click(function(){
+        var carid = $(this).data('carname');
+        $('#contractModal'+carid).show();
+    });
+});
+
+$(document).ready(function(){
+    $('.modal-content').on('change', 'input[name="hours"]', function() {
+        var carid = $(this).closest('.modal').attr('id').replace('contractModal', '');
+        var price = parseFloat($('#contractModal'+carid).find('input[name="price"]').val());
+        var hours = parseInt($(this).val());
+        var total_price = price * hours;
+        $('#contractModal'+carid).find('input[name="total_price"]').val(total_price);
+    });
+});
+</script>
+<script>$(document).on('click', function(event) {
+  // Если кликнули вне модального окна, скрыть его
+  if (!$(event.target).closest('.modal-content').length && !$(event.target).is('.car-button')) {
+    $('.modal').hide();
+  }
+});</script>
+
+<script>
+    // Находим форму по ее id и добавляем обработчик события "submit"
+    document.querySelector('#contractForm<?php echo $row["Car_ID"]; ?>').addEventListener('submit', function(e) {
+        e.preventDefault(); // Останавливаем отправку формы по умолчанию
+        alert('Заявка успешно создана'); // Показываем сообщение
+        document.querySelector('#contractModal<?php echo $row["Car_ID"]; ?>').style.display = 'none'; // Скрываем модальное окно
+    });
+</script>
+<style>
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="datetime-local"],
+.modal-content input[type="number"] {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content input[type="text"]:read-only {
+  background-color: #eee;
+}
+
+.modal-content button[type="submit"] {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+</style>
+</section>
+
+
+<?php 
+if (isset($_POST["submitform"])) {
+    $Car_ID = $_POST['carid'];
+    $Rent_Begin = $_POST['start_date'];
+    $Hour = $_POST['hours'];
+    $Itog = $_POST['total_price'];
+    $submitquery = "INSERT INTO Rent (Car_ID, Rent_Begin, Hour, Itog, C_ID, Status) VALUES (:Car_ID, :Rent_Begin, :Hour, :Itog, :C_ID, :Status)";
+        $query3 = $conn->prepare($submitquery);
+        $query3->execute([
+            ":Car_ID" => $Car_ID,
+            ":Rent_Begin" => $Rent_Begin,
+            ":Hour" => $Hour,
+            ":Itog" => $Itog,
+            ":C_ID" => $c_id,
+            ":Status" => $status,
+        ]);
+    }
+    
+?>
+
+
+
+    <?php 
+    $selectquery = "SELECT Status FROM Rent WHERE C_ID =:C_ID";
+    $query5 = $conn->prepare($selectquery);
+    $query5->execute([
+        ":C_ID" => $c_id,
+    ]);
+    $row5 = $query5->fetch();
+    $statusfinal = $row5['Status'];
+    ?>
+    <?php if ($statusfinal === "Подтверждено"): ?>
+    <div class="modal">
+        <div class="modal-content">
+            <h2>Заявка подтверждена</h2>
+            <button>Оплатить</button>
+        </div>
+    </div>
+<?php endif; ?>
+
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+</style>
+    
+     
+
+
+
+
+
+
 
 
         <div class="iframe">

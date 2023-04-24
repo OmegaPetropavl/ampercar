@@ -13,6 +13,7 @@
             <a href="/logout.php">Выйти</a>
             <br>
             <a href="/admin/car.php">Автомобили</a>
+            <a href="/admin/rent.php">Заявки</a>
         <?php else: 
         echo '<h2>Restricted area, get away from here!</h2>';
         echo '<a href="/logout.php">Выйти</a>';

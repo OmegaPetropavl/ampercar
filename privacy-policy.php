@@ -1,35 +1,35 @@
 
-<!-- saved from url=(0042)https://anytime.kz/privacy-policy-rus.html -->
+<!-- saved from url=(0042)https://ampercar.kz/privacy-policy-rus.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="description" content="Политика конфиденциальности Anytime.kz">
+	<meta name="description" content="Политика конфиденциальности ampercar.kz">
 	<meta name="keywords" content="Политика конфиденциальности">
 	<meta name="google-site-verification" content="7rwlYCgqCUH_xgs-5j-x18cGv-y4QrrK2IaY_HPGFAs">
 	<meta name="yandex-verification" content="41a2aa0fec797dc0">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="apple-touch-icon" sizes="180x180" href="https://anytime.kz/_assets/favicon/apple-touch-icon.png?v=1.3">
-	<link rel="icon" type="image/png" sizes="32x32" href="https://anytime.kz/_assets/favicon/favicon-32x32.png?v=1.3">
-	<link rel="icon" type="image/png" sizes="16x16" href="https://anytime.kz/_assets/favicon/favicon-16x16.png?v=1.3">
-	<link rel="manifest" href="https://anytime.kz/_assets/favicon/site.webmanifest?v=1.3">
-	<link rel="mask-icon" href="https://anytime.kz/_assets/favicon/safari-pinned-tab.svg?v=1.3" color="#5bbad5">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://ampercar.kz/_assets/favicon/apple-touch-icon.png?v=1.3">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://ampercar.kz/_assets/favicon/favicon-32x32.png?v=1.3">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://ampercar.kz/_assets/favicon/favicon-16x16.png?v=1.3">
+	<link rel="manifest" href="https://ampercar.kz/_assets/favicon/site.webmanifest?v=1.3">
+	<link rel="mask-icon" href="https://ampercar.kz/_assets/favicon/safari-pinned-tab.svg?v=1.3" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#2b5797">
 	<meta name="theme-color" content="#000000">
-	<title>Политика конфиденциальности Anytime.kz</title>
-	<meta property="og:title" content="Политика конфиденциальности Anytime.kz">
-	<!--<base href="https://anytime.kz/">--><base href=".">
-	<meta name="title" content="Политика конфиденциальности Anytime.kz">
+	<title>Политика конфиденциальности ampercar.kz</title>
+	<meta property="og:title" content="Политика конфиденциальности ampercar.kz">
+	<!--<base href="https://ampercar.kz/">--><base href=".">
+	<meta name="title" content="Политика конфиденциальности ampercar.kz">
 	
 </head>
 <body>
 	<div style="margin: 20px auto 0; max-width: 1000px; padding: 0 15px; font-size: 18px;font-family: Arial, Helvetica, sans-serif;">
 		<p style="text-align: center;"><b>Политика конфиденциальности</b></p>
-<p style="text-align: justify;">Компания Ди-Мобилити Уорлдвайд a.s создала бесплатное мобильное приложение Anytime каршеринг Казахстан, а также Сайт (далее Сервис). Сервис предоставляется бесплатно и предназначен для использования «как есть».</p>
+<p style="text-align: justify;">Компания Ди-Мобилити Уорлдвайд a.s создала бесплатное мобильное приложение ampercar каршеринг Казахстан, а также Сайт (далее Сервис). Сервис предоставляется бесплатно и предназначен для использования «как есть».</p>
 <p style="text-align: justify;">Данная страница используется для информирования посетителей о наших правилах сбора, использования и разглашения личной информации.</p>
-<p style="text-align: justify;">Если вы решите воспользоваться нашим Сервисом, вы соглашаетесь на сбор и обработку персональных данных, а также трансграничную передачу данных, в том числе в страны, не обеспечивающие адекватный уровень защиты персональных данных, в соответствии с Согласием на Сбор и обработку персональных данных, пользователя Anytime каршеринг Казахстан размещенного в Интернете по адресу: <a href="https://anytime.kz/agreement.html">https://anytime.kz.</a></p>
-<p style="text-align: justify;">Термины, используемые в Политике конфиденциальности, имеют то же значение что и в условиях <a href="https://anytime.kz/contract.html">Договора Anytime</a>, если иное не определено в настоящей Политике конфиденциальности.</p>
+<p style="text-align: justify;">Если вы решите воспользоваться нашим Сервисом, вы соглашаетесь на сбор и обработку персональных данных, а также трансграничную передачу данных, в том числе в страны, не обеспечивающие адекватный уровень защиты персональных данных, в соответствии с Согласием на Сбор и обработку персональных данных, пользователя ampercar каршеринг Казахстан размещенного в Интернете по адресу: <a href="https://ampercar.kz/agreement.html">https://ampercar.kz.</a></p>
+<p style="text-align: justify;">Термины, используемые в Политике конфиденциальности, имеют то же значение что и в условиях <a href="https://ampercar.kz/contract.html">Договора ampercar</a>, если иное не определено в настоящей Политике конфиденциальности.</p>
 <p style="text-align: justify;"><b>Сбор и использование информации</b></p>
-<p style="text-align: justify;">В целях улучшения нашего Сервиса мы можем потребовать предоставить нам следующие персональные данные: (1) фамилия, имя, отчество (в случае, если указано в Документе, удостоверяющем личность), и (2) дата, месяц и год рождения, и (3) место рождения, и (4) индивидуальный идентификационный номер (ИИН), только для граждан Казахстана и (или) лиц без гражданства, и (5) выдавший орган, дата выдачи и срок действия, серия и номер Документа, удостоверяющего личность (или его заменяющего), и (6) сведения об адресе регистрации по месту жительства, и (7) данные водительского удостоверения (выдавший орган, дата выдачи и срок действия, серия и номер, разрешенные для управления категории), и (8) контактные данные, в том числе, но не ограничиваясь, номер мобильного телефона, адрес электронной почты, и (9) данные о наличии (отсутствии) медицинских противопоказаний к использованию транспортного средства, и (10) фотография, и (11) данные о месте работы и занимаемой должности, и (12) данные геолокации (навигационные данные) Клиента, и (13) любые иные персональные данные, связанные или которые могут создаваться в связи с заключением и исполнением <a href="https://anytime.kz/contract.html">Договора Anytime</a>&nbsp;и (или) <a href="https://anytime.kz/agreement.html">соглашения об использовании программного обеспечения</a> используемого ТОО «Ди-Мобилити Казахстан» для оказания услуг поминутной/посуточной аренды (каршеринга). Информация, которую мы запрашиваем, будет сохранена нами и использована, как описано в политике конфиденциальности.</p>
+<p style="text-align: justify;">В целях улучшения нашего Сервиса мы можем потребовать предоставить нам следующие персональные данные: (1) фамилия, имя, отчество (в случае, если указано в Документе, удостоверяющем личность), и (2) дата, месяц и год рождения, и (3) место рождения, и (4) индивидуальный идентификационный номер (ИИН), только для граждан Казахстана и (или) лиц без гражданства, и (5) выдавший орган, дата выдачи и срок действия, серия и номер Документа, удостоверяющего личность (или его заменяющего), и (6) сведения об адресе регистрации по месту жительства, и (7) данные водительского удостоверения (выдавший орган, дата выдачи и срок действия, серия и номер, разрешенные для управления категории), и (8) контактные данные, в том числе, но не ограничиваясь, номер мобильного телефона, адрес электронной почты, и (9) данные о наличии (отсутствии) медицинских противопоказаний к использованию транспортного средства, и (10) фотография, и (11) данные о месте работы и занимаемой должности, и (12) данные геолокации (навигационные данные) Клиента, и (13) любые иные персональные данные, связанные или которые могут создаваться в связи с заключением и исполнением <a href="https://ampercar.kz/contract.html">Договора ampercar</a>&nbsp;и (или) <a href="https://ampercar.kz/agreement.html">соглашения об использовании программного обеспечения</a> используемого ТОО «Ди-Мобилити Казахстан» для оказания услуг поминутной/посуточной аренды (каршеринга). Информация, которую мы запрашиваем, будет сохранена нами и использована, как описано в политике конфиденциальности.</p>
 <p style="text-align: justify;">Приложение и Сайт использует сторонние сервисы, которые могут собирать информацию, используемые для идентификации ваших данных.</p>
 <p style="text-align: justify;">Ссылка на политику конфиденциальности сторонних поставщиков услуг, используемых приложением:</p>
 <p style="text-align: justify;"><a href="https://www.google.com/policies/privacy/">Google Play Services</a></p>

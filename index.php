@@ -201,6 +201,7 @@ if(isset($_SESSION['Login'])) {
                     session_start();
                     $_SESSION['Login'] = $Login;
                     header ('Location:/welcome.php');
+                    echo '<meta HTTP-EQUIV="Refresh" Content="0; URL=/welcome.php">';
                     exit();
                 }
                     
